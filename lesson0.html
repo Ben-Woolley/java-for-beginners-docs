@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- Common Head -->
+		<common>
+			<meta charset="utf-8">
+		  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
+
+		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		  <link rel="stylesheet" href="css/reset.css">
+		  <link rel="stylesheet" href="css/reveal.css">
+		  <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		  <!-- Theme used for syntax highlighting of code -->
+		  <link rel="stylesheet" href="lib/css/monokai.css">
+
+		  <!-- Printing and PDF exports -->
+		  <script>
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  </script>
+
+		  <!--[if lt IE 9]>
+		  <script src="lib/js/html5shiv.js"></script>
+		  <![endif]-->
+		</common>
+		<!-- End Common Head -->
+
+	</head>
+	<body>
+		<common>
+			<script>
+				var doc = document.querySelector('link[rel="import"]').import;
+				// Grab DOM from doc.html's document.
+				var text = doc.querySelector('head');
+				document.head.appendChild(doc.cloneNode(true));
+			</script>
+		</common>
+
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Lesson 0</h2>
+					<p>Intro, installation and setup</p>
+				</section>
+				<section>
+					<h2>Lesson Outcomes</h2>
+					<h4>By The end of this lesson you should:</h4>
+					<ul>
+						<li>Know what you will aim to learn in the course</li>
+						<li>Have your machine ready to build and run Java code</li>
+					</ul>
+				</section>
+				<section>
+					Welcome to Java for Beginners!
+					<section>
+						<p>This course is intended to be an introduction to <strong>programming that happens to be in Java</strong>.</p>
+						<p>Many of the concepts you learn here are in the vast majority of programming languages out there; each one being a different tool for different jobs!</p>
+					</section>
+					<section>
+						<p>
+							By the end of this course I hope you will have an awareness or understanding of:
+							<ul>
+								<li>The fundamental concepts that programming languages feature</li>
+								<li>Some basic object-oriented programming concepts</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<p>
+							And the ability to:
+							<ul>
+								<li>Solve problems by "translating English into Java"</li>
+								<li>Write small, interactive, multi-file Java programs</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+				<section>
+					How do programs run on your computer?
+					<section>
+						<p>Computers understand a fundamental set of instructions.</p>
+						<p class="fragment">These instructions are however very primitive and way too low-level for everyone to write programs in.</p>
+						<p class="fragment">Programming languages sit on top of these primitive instructions and give us a more human-friendly set of tools.</p>
+					</section>
+					<section>
+						<p>The world now has more programming languages than it knows what to do with - built not only on top of machine code but also on each other.</p>
+						<p class="fragment">Each has it's own specialty or opinions that makes it the best for certain jobs, for example:
+							<small>
+								<ul>
+									<li class="fragment"><strong>C</strong> is a language written originally for building operating systems for computers. It exposes enough of the machine level to let clever people do magic, and dangerous people cause many more bugs.</li>
+									<li class="fragment"><strong>R</strong> specializes in statistical computing</li>
+									<li class="fragment"><strong>Python</strong> is a general-purpose language focusing on readability</li>
+								</ul>
+							</small>
+						</p>
+					</section>
+					<section>
+						<p>These languages end up running on computers in one of two ways:
+							<small>
+								<ul>
+									<li class="fragment">The program source code is <strong>compiled</strong> (aka translated) to machine-understandable code <strong>before it can be run</strong>.
+										<ul><li>e.g. C, C++, Java*</li></ul>
+									</li>
+									<li class="fragment">An <strong>interpreter</strong> runs the program that knows how to turn your source into machine-understandable code <strong>while it runs</strong>.
+										<ul><li>e.g. Python, Java*</li></ul>
+									</li>
+								</ul>
+							</small>
+						</p>
+						<p class="fragment">Java actually does both!</p>
+						<small>Java source is compiled to Java Virtual Machine (JVM) bytecode, which the JVM installed on supported machines can then interpret!</small>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<common>
+			<script src="js/reveal.js"></script>
+
+			<script>
+				// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies
+				Reveal.initialize({
+					dependencies: [
+						{ src: 'js/test.js',},
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/notes/notes.js', async: true },
+						{ src: 'plugin/highlight/highlight.js', async: true }
+					]
+				});
+			</script>
+		</common>
+	</body>
+</html>
