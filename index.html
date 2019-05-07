@@ -1,49 +1,125 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- Common Head -->
+		<common>
+			<meta charset="utf-8">
+		  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-		<title>reveal.js</title>
+		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+		  <link rel="stylesheet" href="css/reset.css">
+		  <link rel="stylesheet" href="css/reveal.css">
+		  <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		  <!-- Theme used for syntax highlighting of code -->
+		  <link rel="stylesheet" href="lib/css/monokai.css">
+
+		  <!-- Printing and PDF exports -->
+		  <script>
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  </script>
+
+		  <!--[if lt IE 9]>
+		  <script src="lib/js/html5shiv.js"></script>
+		  <![endif]-->
+		</common>
+		<!-- End Common Head -->
+
 	</head>
 	<body>
+		<common>
+			<script>
+				var doc = document.querySelector('link[rel="import"]').import;
+				// Grab DOM from doc.html's document.
+				var text = doc.querySelector('head');
+				document.head.appendChild(doc.cloneNode(true));
+			</script>
+		</common>
+
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<section>
+						<h2>Welcome to Java for beginners</h2>
+						<p>
+							<small><a href="#/2/0">Lesson Slides</a></small>
+						</p>
+					</section>
+				</section>
+				<section>
+					<small>Required Software</small>
+					<section>
+						You will need to install a few things...</br>
+						<small>We'll do this together now</small>
+					</section>
+					<section>
+						The Java JDK<br>
+						(Java Development Kit)
+						<p>
+							<small><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Found here</a></small>
+						</p>
+					</section>
+					<section>
+						IntelliJ IDEA IDE<br>
+						(Integrated Development Environment)
+						<p>
+							<small><a href="https://www.jetbrains.com/idea/download">Found here</a></small>
+						</p>
+					</section>
+				</section>
+				<section>
+					<small>Lessons</small>
+					<section>
+						Core
+						<small>
+								<ol start="0">
+									<li><a href="html/lesson0">Intro, installation and setup</a></li>
+									<li><a href="html/lesson1">Describing how to solve problems</a></li>
+									<li><a href="html/lesson2">The basic building blocks of programming</a></li>
+									<li><a href="html/lesson3">Classes and Methods</a></li>
+								</ol>
+						</small>
+					</section>
+					<section>
+						Extras
+						<small>
+								<ul>
+									<li><a href="html/extras/debugging.html">Using the debugger</a></li>
+									<li><a href="html/extras/testing.html">Testing your code</a></li>
+								</ul>
+						</small>
+					</section>
+				</section>
 			</div>
 		</div>
 
-		<script src="js/reveal.js"></script>
+		<common>
+			<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
+			<script>
+				// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies
+				Reveal.initialize({
+					dependencies: [
+						{ src: 'js/test.js',},
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/notes/notes.js', async: true },
+						{ src: 'plugin/highlight/highlight.js', async: true }
+					]
+				});
+			</script>
+		</common>
 	</body>
 </html>
