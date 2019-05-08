@@ -55,7 +55,7 @@
 				<section>
 					Lesson Outcomes
 					<section>
-						<h4>By The end of this lesson you should:</h4>
+						<p>By The end of this lesson you should:</p>
 						<ul>
 							<li>Know what you will aim to learn in the course</li>
 							<li>Have your machine ready to build and run Java code</li>
@@ -69,22 +69,18 @@
 						<p>Many of the concepts you learn here are in the vast majority of programming languages out there; each one being a different tool for different jobs!</p>
 					</section>
 					<section>
-						<p>
-							By the end of this course I hope you will have an awareness or understanding of:
-							<ul>
-								<li>The fundamental concepts that programming languages feature</li>
-								<li>Some basic object-oriented programming concepts</li>
-							</ul>
-						</p>
+						<p>By the end of this course I hope you will have an awareness or understanding of:</p>
+						<ul>
+							<li>The fundamental concepts that programming languages feature</li>
+							<li>Some basic object-oriented programming concepts</li>
+						</ul>
 					</section>
 					<section>
-						<p>
-							And the ability to:
-							<ul>
-								<li>Solve problems by "translating English into Java"</li>
-								<li>Write small, interactive, multi-file Java programs</li>
-							</ul>
-						</p>
+						<p>And the ability to:</p>
+						<ul>
+							<li>Solve problems by "translating English into Java"</li>
+							<li>Write small, interactive, multi-file Java programs</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -96,45 +92,37 @@
 					</section>
 					<section>
 						<p>The world now has more programming languages than it knows what to do with - built not only on top of machine code but also on each other.</p>
-						<p class="fragment">Each has it's own specialty or opinions that makes it the best for certain jobs, for example:
-							<small>
-								<ul>
-									<li class="fragment"><strong>C</strong> is a language written originally for building operating systems for computers. It exposes enough of the machine level to let clever people do magic, and dangerous people cause many more bugs.</li>
-									<li class="fragment"><strong>R</strong> specializes in statistical computing</li>
-									<li class="fragment"><strong>Python</strong> is a general-purpose language focusing on readability</li>
-								</ul>
-							</small>
-						</p>
+						<p class="fragment">Each has it's own specialty or opinions that makes it the best for certain jobs, for example:</p>
+						<ul>
+							<li class="fragment"><small><strong>C</strong> is a language written originally for building operating systems for computers. It exposes enough of the machine level to let clever people do magic, and dangerous people cause many more bugs.</small></li>
+							<li class="fragment"><small><strong>R</strong> specializes in statistical computing</small></li>
+							<li class="fragment"><small><strong>Python</strong> is a general-purpose language focusing on readability</small></li>
+						</ul>
 					</section>
 					<section>
-						<p>These languages end up running on computers in one of two ways:
-							<small>
-								<ul>
-									<li class="fragment">The program source code is <strong>compiled</strong> (aka translated) to machine-understandable code <strong>before it can be run</strong>.
-										<ul><li>e.g. C, C++, Java*</li></ul>
-									</li>
-									<li class="fragment">An <strong>interpreter</strong> runs the program that knows how to turn your source into machine-understandable code <strong>while it runs</strong>.
-										<ul><li>e.g. Python, Java*</li></ul>
-									</li>
-								</ul>
-							</small>
-						</p>
-						<group class="fragment">
+						<p>These languages end up running on computers in one of two ways:</p>
+						<ul>
+							<li class="fragment"><small>The program source code is <strong>compiled</strong> (aka translated) to machine-understandable code <strong>before it can be run</strong>.</small>
+								<ul><li><small>e.g. C, C++, Java*</small></li></ul>
+							</li>
+							<li class="fragment"><small>An <strong>interpreter</strong> runs the program that knows how to turn your source into machine-understandable code <strong>while it runs</strong>.</small>
+								<ul><li><small>e.g. Python, Java*</small></li></ul>
+							</li>
+						</ul>
+						<div class="fragment">
 							<p>Java actually does both!</p>
 							<small>Java source is compiled to Java Virtual Machine (JVM) bytecode, which the JVM installed on supported machines can then interpret!</small>
-						</group>
+						</div>
 					</section>
 				</section>
 				<section>
 					What is Java?
 					<section>
-						<p>
-							Java is one of the most popular programming languages used today, it is:
-							<ul>
-								<li>Object-oriented - You have objects of certain types, that have properties and ways to interact with those properties.</li>
-							  <li>Class-based - You define the blueprints for objects before you create them.</li>
-							</ul>
-						</p>
+						<p>Java is one of the most popular programming languages used today, it is:</p>
+						<ul>
+							<li>Object-oriented - You have objects of certain types, that have properties and ways to interact with those properties.</li>
+						  <li>Class-based - You define the blueprints for objects before you create them.</li>
+						</ul>
 					</section>
 					<section>
 						<p>Java is designed to be runnable everywhere by use of the Java Virtual Machine (JVM).</p>
@@ -142,20 +130,18 @@
 						<p><strong>Write Once, Run Anywhere</strong> is one of the biggest advantages of Java.</p>
 					</section>
 					<section>
-						<p>
-							<p>Because Java is used everywhere, it's used for many things.</p>
-							<p class="fragment">It is used across Expedia Group for most of the functionality of our websites.</p>
-							<p class="fragment">
-								It has also been used to write:
-								<ul>
-									<li class="fragment">Simulations</li>
-									<li class="fragment">Video games</li>
-									<li class="fragment">Development tools (like the one we'll be using)</li>
-									<li class="fragment">Android apps*</li>
-								</ul>
-							</p>
-						 <small class="fragment">(*In a sense, they use the same language, but Android doesn't use the JVM)</small>
-						</p>
+						<p>Because Java is used everywhere, it's used for many things.</p>
+						<p class="fragment">It is used across Expedia Group for most of the functionality of our websites.</p>
+						<div class="fragment">
+							<p>It has also been used to write:</p>
+									<ul>
+										<li class="fragment">Simulations</li>
+										<li class="fragment">Video games</li>
+										<li class="fragment">Development tools (like the one we'll be using)</li>
+										<li class="fragment">Android apps*</li>
+									</ul>
+							 <small class="fragment">(*In a sense, they use the same language, but Android doesn't use the JVM)</small>
+						</div>
 					</section>
 				</section>
 				<section>
@@ -183,12 +169,11 @@
 				<section>
 					Setup
 					<section>
-						<p>Today we are going to get your machine ready for writing, compiling, and running Java programs:
-							<ol>
-								<li>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK (Java Development Kit)</a></li>
-								<li><a href="https://www.jetbrains.com/idea/download">IntelliJ IDEA Community Edition</a></li>
-							</ol>
-						</p>
+						<p>Today we are going to get your machine ready for writing, compiling, and running Java programs:</p>
+						<ol>
+							<li>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK (Java Development Kit)</a></li>
+							<li><a href="https://www.jetbrains.com/idea/download">IntelliJ IDEA Community Edition</a></li>
+						</ol>
 						<p>We are then going to <strong>download</strong> the <a href="https://github.com/Ben-Woolley/java-for-beginners/archive/master.zip" download>the java project zip</a>, unzip, and import it into IntelliJ</p>
 					</section>
 				</section>
