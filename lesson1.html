@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- Common Head -->
+		<common>
+			<meta charset="utf-8">
+		  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
+
+		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		  <link rel="stylesheet" href="css/reset.css">
+		  <link rel="stylesheet" href="css/reveal.css">
+		  <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		  <!-- Theme used for syntax highlighting of code -->
+		  <link rel="stylesheet" href="lib/css/monokai.css">
+
+		  <!-- Printing and PDF exports -->
+		  <script>
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  </script>
+
+		  <!--[if lt IE 9]>
+		  <script src="lib/js/html5shiv.js"></script>
+		  <![endif]-->
+		</common>
+		<!-- End Common Head -->
+
+	</head>
+	<body>
+		<common>
+			<script>
+				var doc = document.querySelector('link[rel="import"]').import;
+				// Grab DOM from doc.html's document.
+				var text = doc.querySelector('head');
+				document.head.appendChild(doc.cloneNode(true));
+			</script>
+		</common>
+
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Lesson 1</h2>
+					<p>Describing how to solve problems</p>
+				</section>
+				<section>
+					Lesson Outcomes
+					<section>
+						<p>By The end of this lesson you should:</p>
+						<ul>
+							<li>Understand how programming languages provide the tools to solve problems</li>
+							<li>Be able to solve problems in a structured format known as pseudocode</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					What is programming?
+					<section>
+						<h2>What programming isn't</h2>
+						<p>Unfortunately programming doesn’t do anything for you on its own.</p>
+						<p>Every piece of functionality on every computer - from the operating system all the way up to this page being drawn from HTML have all been enabled by someone writing that functionality.</p>
+					</section>
+					<section>
+						<h2>What programming is</h2>
+						<p>Programming or software development is essentially <strong>writing the general solution to a problem</strong> in a <strong>strongly structured and limited set of keywords</strong>.</p>
+						<p>So programming doesn’t solve your problems for you, it enables you to:</p>
+						<ul>
+							<li>Use a computer to do the brainwork that you don’t want to do yourself.</li>
+							<li>Automate tasks that you can figure out the solution to.</li>
+						</ul>
+					</section>
+					<section>
+						<p>An Exercise:</p>
+						<p>Imagine a person who has no idea how anything works, but can carry out basic instructions.</p>
+					</section>
+					<!--TODO below is old content-->
+				</section>
+			</div>
+		</div>
+
+		<common>
+			<script src="js/reveal.js"></script>
+
+			<script>
+				// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies
+				Reveal.initialize({
+					dependencies: [
+						{ src: 'js/test.js',},
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/notes/notes.js', async: true },
+						{ src: 'plugin/highlight/highlight.js', async: true }
+					]
+				});
+			</script>
+		</common>
+	</body>
+</html>
