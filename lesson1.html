@@ -192,7 +192,100 @@
 								*do something for each value in the range, at the given stepValue
 						</code></pre>
 					</section>
+					<section>
+						<h2>for with counter</h2>
+						<pre><code data-trim class="nohighlight">
+							set weekDays to [Monday,  Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+							for (counter from 1 to 7)
+							  print the counter, next to to it also print weekDays[counter] (the weekday in the counter'th position)
+						</code></pre>
+					</section>
+					<section>
+						<h2>Whiteboard Exercise</h2>
+						<p>Write pseudocode for the following:</p>
+						<blockquote>Happy Street has house numbers 1-38. Santa wants a list of house numbers printed out so he can tick off each house he’s visited.</blockquote>
+						<p>Extension:</p>
+						<blockquote>Santa is feeling lazy so he only wants to visit every other house. Print a list with every 2nd house instead.</blockquote>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>while loop</h2>
+						<p>Do something a potentially infinite number of times</p>
+						<p>The loop stops when the condition becomes true</p>
+						<pre><code data-trim class="nohighlight">
+							while (*some condition*)
+  							* do something, for as many times as the condition stays true
+						</code></pre>
+						<pre><code data-trim class="nohighlight">
+							set counter to 0
+							while (counter is less than 10)
+							  print counter
+							  set counter to counter + 1
+						</code></pre>
+					</section>
+					<section>
+						<h2>Whiteboard Exercise</h2>
+						<p>Write pseudocode for the following:</p>
+						<blockquote>Santa doesn’t know how many houses are on Long Street but he knows he’ll get too tired if he visits too many. He will keep visiting houses until he’s visited 108 in total.</blockquote>
+					</section>
+				</section>
+				<section>
+					Examples
+					<section>
+						<p>For example, to decide whether to take out an umbrella today, I’d say</p>
+						<blockquote>If it’s going to rain then I’d take my umbrella.</blockquote>
+						<p>Which I can write in a more structured way as:</p>
+						<pre><code data-trim class="nohighlight">
+							if (it is going to rain)
+							  bring my umbrella
+							else
+							  leave it at home
+						</code></pre>
+					</section>
+					<section>
+						<p>Or to find someone’s name in an unsorted list, I’d say</p>
+						<blockquote>Go through the list until I see the name I’m looking for</blockquote>
+						<p>This is a bit harder to translate, but essentially I’m saying</p>
+						<blockquote>I would check each item in the list, until I find the name or I’ve checked the entire list</blockquote>
+					</section>
+					<section>
+						<p>Which I can now write as:</p>
+						<pre><code data-trim class="nohighlight">
+							for (each name in the list)
+							  if (that name matches the one I'm looking for)
+							    the name is in the list
+							  else
+							    continue through the list
 
+							if (I go through the whole list without finding the name)
+							  the name is not in the list
+						</code></pre>
+					</section>
+					<section>
+						<p>Or using a variable, as:</p>
+						<pre><code data-trim class="nohighlight">
+							set isInTheList to false
+							for (each name in the list) do
+							  if (that name matches the one I'm looking for)
+							    set isInTheList to true
+							  else
+							    continue through the list
+
+							if (isInTheList is true)
+							  the name is in the list
+							else
+							  the name is not in the list
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					Exercises
+					<section>
+						<h2>Exercise 1</h2>
+						<p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
+						<p>Give your answer in pseudocode.</p>
+					</section>
 				</section>
 			</div>
 		</div>
