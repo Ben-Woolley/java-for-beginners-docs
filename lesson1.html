@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<!-- Common Head -->
 		<common>
@@ -34,18 +34,9 @@
 		</common>
 		<!-- End Common Head -->
 
+		<title>Java for beginners - Describing how to solve problems</title>
 	</head>
 	<body>
-		<common>
-			<script>
-				var doc = document.querySelector('link[rel="import"]').import;
-				// Grab DOM from doc.html's document.
-				var text = doc.querySelector('head');
-				document.head.appendChild(doc.cloneNode(true));
-			</script>
-		</common>
-
-
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -81,8 +72,127 @@
 					<section>
 						<p>An Exercise:</p>
 						<p>Imagine a person who has no idea how anything works, but can carry out basic instructions.</p>
+						<br/>
+						<p>How would you tell them how to make a cup of tea?</p>
+						<small>Write down your instructions, we’ll make use of these later.</small>
 					</section>
-					<!--TODO below is old content-->
+				</section>
+				<section>
+					<section>
+						<h2>Pseudocode</h2>
+						<p>Pseudocode is an almost-bridge between normal English statements and a fully functional programming language.</p>
+						<p>It’s a way of expressing the logic you want to achieve without having to go straight into writing code.</p>
+						<p>It doesn’t have a set syntax (defined structure) but does have the key components of most programming languages.</p>
+					</section>
+					<section>
+						<h2>Pseudocode</h2>
+						<p>In order to describe solutions to problems, most programming languages provide the following functionality at a minimum:</p>
+					</section>
+				</section>
+				<section>
+					<h2>Variables</h2>
+					<p>Variables are for storing values we can refer to and update in our program.</p>
+					<pre><code class="nohighlight">set *variableName* to *variableValue*</code></pre>
+					<pre><code data-trim class="nohighlight">
+						set myAge to 24
+						set legalDrinkingAge to 18
+						if (myAge is greater than or equal to legalDrinkingAge)
+						  I can drink
+						else
+						  I cannot drink
+					</code></pre>
+				</section>
+				<section>
+					<h2>if-statements</h2>
+					<section>
+						<p>if-statements give us <strong>conditional execution</strong> in our code.</p>
+						<p>This enables us to change the program's behavior based on true/false assertions.</p>
+						<pre><code data-trim class="nohighlight">
+							if (*some condition*)
+							  *thing to do if true*
+							else
+							  *thing to do if false
+						</code></pre>
+					</section>
+					<section>
+						<pre><code data-trim class="nohighlight">
+							if (today is Friday)
+							  send a team lunch invitation in outlook
+						</code></pre>
+						<p>an 'else' clause can be added, which is done if the condition is false:</p>
+						<pre><code data-trim class="nohighlight">
+							if (it is the morning and it is the weekend)
+							  stay at home and do nothing
+							else
+							  go to work
+						</code></pre>
+					</section>
+					<section>
+						<p>Conditions can be chained, if you need more than 2 paths:</p>
+						<pre><code data-trim class="nohighlight">
+							set user to super user
+							if (user is super user)
+							  user can do anything
+							else if (user is admin)
+							  user can do admin tasks
+							else
+							  user has no special permissions
+						</code></pre>
+					</section>
+					<section>
+						<h2>Whiteboard Exercise</h2>
+						<p>Write pseudocode for the following:</p>
+						<blockquote>If Polly has been good, Santa will give her a toy. If Polly has been bad, Polly’s gift will be a lump of coal.</blockquote>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>for-loops</h2>
+						<p>For loops enable you to do something multiple times, there are 2 varieties:</p>
+						<ul>
+							<li>for each</li>
+							<li>for with counter</li>
+						</ul>
+					</section>
+					<section>
+						<h2>for each</h2>
+						<p>Essentially "Do something for each thing in some collection".</p>
+						<pre><code data-trim class="nohighlight">
+							for (each item in a collection)
+							  *do something with each item
+						</code></pre>
+						<pre><code data-trim class="nohighlight">
+							for (each day of the month)
+							  display the day, weekday, and events on the day
+						</code></pre>
+					</section>
+					<section>
+						<h2>Whiteboard Exercise</h2>
+						<p>Write pseudocode for the following:</p>
+						<blockquote>Write out a receipt for each item in Santa’s sack of presents.</blockquote>
+					</section>
+					<section>
+						<h2>for with counter</h2>
+						<p>Gives you a counter you can use for whatever you want. You can:</p>
+						<ul>
+							<li>Start at any value</li>
+							<li>End at any value</li>
+							<li>Increment by any value (even downward)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>for with counter</h2>
+						<pre><code data-trim class="nohighlight">
+							for (counter from *lowerBound* to *upperBound*)
+							  *do something for each value in the range
+						</code></pre>
+						<p>or with a different increment/step</p>
+						<pre><code data-trim class="nohighlight">
+							for (counter from *lowerBound* to *upperBound*, step *stepValue*)
+								*do something for each value in the range, at the given stepValue
+						</code></pre>
+					</section>
+
 				</section>
 			</div>
 		</div>
@@ -96,7 +206,6 @@
 				// - https://github.com/hakimel/reveal.js#dependencies
 				Reveal.initialize({
 					dependencies: [
-						{ src: 'js/test.js',},
 						{ src: 'plugin/markdown/marked.js' },
 						{ src: 'plugin/markdown/markdown.js' },
 						{ src: 'plugin/notes/notes.js', async: true },

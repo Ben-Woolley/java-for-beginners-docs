@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<!-- Common Head -->
 		<common>
@@ -34,18 +34,10 @@
 		</common>
 		<!-- End Common Head -->
 
+		<title>Java for beginners - Intro, installation and setup</title>
+
 	</head>
 	<body>
-		<common>
-			<script>
-				var doc = document.querySelector('link[rel="import"]').import;
-				// Grab DOM from doc.html's document.
-				var text = doc.querySelector('head');
-				document.head.appendChild(doc.cloneNode(true));
-			</script>
-		</common>
-
-
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -189,7 +181,6 @@
 				// - https://github.com/hakimel/reveal.js#dependencies
 				Reveal.initialize({
 					dependencies: [
-						{ src: 'js/test.js',},
 						{ src: 'plugin/markdown/marked.js' },
 						{ src: 'plugin/markdown/markdown.js' },
 						{ src: 'plugin/notes/notes.js', async: true },

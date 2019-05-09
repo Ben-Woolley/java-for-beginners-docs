@@ -1,9 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<!-- Common Head -->
 		<common>
-			<meta charset="utf-8">
+		  <meta charset="utf-8">
 		  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
 		  <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,18 +34,10 @@
 		</common>
 		<!-- End Common Head -->
 
+		<title>Java for beginners - Index</title>
+
 	</head>
 	<body>
-		<common>
-			<script>
-				var doc = document.querySelector('link[rel="import"]').import;
-				// Grab DOM from doc.html's document.
-				var text = doc.querySelector('head');
-				document.head.appendChild(doc.cloneNode(true));
-			</script>
-		</common>
-
-
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -55,8 +47,8 @@
 				<section>
 					<small>Required Software</small>
 					<section>
-						You will need to install a few things...</br>
-						<small>We'll do this together now</small>
+						You will need to install a few things...<br/>
+						<small>We'll do this together later</small>
 					</section>
 					<section>
 						The Java JDK<br>
@@ -85,7 +77,7 @@
 						</ol>
 					</section>
 					<section>
-						Extras
+						<p>Extras</p>
 						<ul>
 							<li><small><a href="debugging.html">Using the debugger</a></small></li>
 							<li><small><a href="testing.html">Testing your code</a></small></li>
@@ -104,7 +96,6 @@
 				// - https://github.com/hakimel/reveal.js#dependencies
 				Reveal.initialize({
 					dependencies: [
-						{ src: 'js/test.js',},
 						{ src: 'plugin/markdown/marked.js' },
 						{ src: 'plugin/markdown/markdown.js' },
 						{ src: 'plugin/notes/notes.js', async: true },
