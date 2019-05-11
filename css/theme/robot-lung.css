@@ -94,12 +94,12 @@ body {
 
 ::selection {
   color: #fff;
-  background: #ffc0d5;
+  background: #ff6060;
   text-shadow: none; }
 
 ::-moz-selection {
   color: #fff;
-  background: #ffc0d5;
+  background: #ff6060;
   text-shadow: none; }
 
 .reveal .slides > section,
@@ -292,7 +292,7 @@ body {
 
 .reveal .roll span:after {
   color: #fff;
-  background: #f30053; }
+  background: #ff6060; }
 
 /*********************************************
  * IMAGES
@@ -314,7 +314,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #FF4081;
+  border-color: #f44242;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************

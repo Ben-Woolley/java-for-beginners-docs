@@ -126,6 +126,259 @@
 						</ul>
 					</section>
 				</section>
+				<section>
+					Variables
+					<section>
+						<p>As we've seen before, variables are for storing values we can refer to and update in our program.</p>
+						<p>We've been putting whatever we want into our pseudocode variables, Java is more picky.</p>
+						<p>Java is <strong>strictly typed</strong> - meaning you must provide the <strong>type</strong> of the variable and stick to it</p>
+						<p>This is the general pattern:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							ObjectType nameOfObject = value;
+						</code></pre>
+					</section>
+					<section>
+						<p>Here are some concrete examples:</p>
+						<pre><code data-trim data-line-numbers class="java">
+						public class VariablesAndTypes {
+						  public static void main(String[] args) {
+						    String greeting = "Hello";
+						    Integer myFavouriteNumber = 17;
+						    Boolean isThisJava = true;
+						  }
+						}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					Types
+					<section>
+						<p>As mentioned before, Java is <strong>strictly typed</strong></p>
+						<p>meaning you need to tell and stick to the type you give things.</p>
+						<p>Java provides the fundamental types with which people can (and have) built everything</p>
+						<p>Among those are basic <strong>data types</strong> that we are concerned with:</p>
+						<ul>
+							<li>Strings (type String)</li>
+							<li>Numbers (types Integer and Double)</li>
+							<li>Booleans or true/false values (type Boolean)</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h3>String</h3>
+					<p>Represents text in your program, they must be enclosed in quote marks ("")</p>
+					<pre><code data-trim data-line-numbers class="java">
+					public class UsingStrings {
+					  public static void main(String[] args) {
+					    String teacherName = "Ben";
+					    String courseName = "Java for beginners";
+					    String statement = teacherName + " teaches " + courseName;
+					    System.out.println(statement);
+					  }
+					}
+					</code></pre>
+					<p>Notice that we can use + to append/glue Strings to each other.</p>
+					<p>This works for other types too, Java does the conversion to String for us.</p>
+				</section>
+				<section>
+					Numbers
+					<section>
+						<p>Java needs you to choose between a number that:</p>
+						<ul>
+							<li>Only does whole numbers (type Integer or Long)</li>
+							<li>Has a decimal place (type Float or Double)</li>
+							<li>Handles even larger numbers (at the cost of memory)</li>
+						</ul>
+						<pre><code data-trim data-line-numbers class="java">
+						public class UsingNumbers {
+						  public static void main(String[] args) {
+						    Integer i1 = 123;
+						    Long l1 = 123l;
+						    Float f1 = 123.45f;
+						    Double d1 = 123.45;
+						  }
+						}
+						</code></pre>
+						<small>You can find out more about these types <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a></small>
+					</section>
+				</section>
+				<section>
+					<h3>Boolean</h3>
+					<p>A true/false value</p>
+					<p>These are used in all decision making, i.e.</p>
+					<ul>
+						<li>if-statements</li>
+						<li>the counter on for loops</li>
+						<li>the check on while loops to continue</li>
+					</ul>
+					<pre><code data-trim data-line-numbers class="java">
+					public class UsingBooleans {
+					  public static void main(String[] args) {
+					    Boolean enabled = true;
+					  }
+					}
+					</code></pre>
+				</section>
+				<section>
+					Operators
+					<section>
+						<h2>Mathematical Operators</h2>
+						<p>Along with the fundamental number types, Java gives us convenient operators to do math:</p>
+						<pre><code data-trim data-line-numbers class="java">
+						public class MathOperators {
+						  public static void main(String[] args) {
+						   Integer plus = 1 + 2;
+						    Integer minus = 1 - 2;
+						    Integer divide = 1 / 2;
+						    Integer multiply = 1 * 2;
+						    Double power = Math.pow(1, 2); // 1 to the power of 2
+						    Integer modulus = 1 % 2; // remainder of 1 divided by 2
+						  }
+						}
+						</code></pre>
+						<p>Note modulus (%) - which is the remainder of integer division, and is more useful than you think it is.</p>
+						<p>These operators follow BODMAS, you can use brackets as normal to control the order.</p>
+					</section>
+					<section>
+						<h2>Comparison Operators</h2>
+						<p>In addition to mathematical calculators, Java also provides handy number comparison:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							public class MathComparisons {
+							  public static void main(String[] args) {
+							    Integer lessThan = 1 < 2;
+							    Integer greaterThan = 1 > 2;
+							    Integer lessThanOrEqual = 1 <= 2;
+							    Integer greaterThanOrEqual = 1 >= 2;
+							    Double equal = 1 == 2; // note it is two equals
+							  }
+							}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					Boolean Operators
+					<section>
+						<h2>Boolean Operators</h2>
+						<p>Java also provides operators for booleans:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							public class BooleanOperators {
+							  public static void main(String[] args) {
+							    Boolean inclusiveOr = true || false;
+							    Boolean and = true && false;
+							    Boolean not = !true;
+							  }
+							}
+						</code></pre>
+					</section>
+					<section>
+						<h2>AND &&</h2>
+						<p>AND is only true if both the left and right value are true.</p>
+						<table>
+						  <tr>
+						    <th></th>
+						    <th>true</th>
+						    <th>false</th>
+						  </tr>
+						  <tr>
+						    <td>true</td>
+						    <td>true</td>
+						    <td>false</td>
+						  </tr>
+						  <tr>
+						    <td>false</td>
+						    <td>false</td>
+						    <td>false</td>
+						  </tr>
+						</table>
+					</section>
+					<section>
+						<h2>OR ||</h2>
+						<p>OR is only false if both the left and right value are false.</p>
+						<p>This is also known as inclusive OR</p>
+						<table>
+						  <tr>
+						    <th></th>
+						    <th>true</th>
+						    <th>false</th>
+						  </tr>
+						  <tr>
+						    <td>true</td>
+						    <td>true</td>
+						    <td>true</td>
+						  </tr>
+						  <tr>
+						    <td>false</td>
+						    <td>true</td>
+						    <td>false</td>
+						  </tr>
+						</table>
+					</section>
+					<section>
+						<h2>NOT !</h2>
+						<p>NOT reverses the boolean it is applied to.</p>
+						<table>
+						  <tr>
+						    <th>original</th>
+						    <th>!original</th>
+						  </tr>
+						  <tr>
+						    <td>true</td>
+						    <td>false</td>
+						  </tr>
+						  <tr>
+						    <td>false</td>
+						    <td>true</td>
+						  </tr>
+						</table>
+					</section>
+				</section>
+				<section>
+					if-statements
+					<section>
+						<p>Another familiar tool, give us <strong>conditional execution</strong> in our code.</p>
+						<pre><code data-trim data-line-numbers class="java">
+							public class IfStatements {
+							  public static void main(String[] args) {
+							    Boolean condition = true;
+
+							    if (condition) {
+							      System.out.println("The condition is true");
+							    }
+
+							    if (condition) {
+							      System.out.println("The condition is true");
+							    } else {
+							      System.out.println("The condition is false");
+							    }
+							  }
+							}
+						</code></pre>
+						<p>In these examples we're using a Boolean variable, you can however inline any expression that returns a Boolean.</p>
+					</section>
+					<section>
+						<p>This example compares</p>
+						<pre><code data-trim data-line-numbers class="java">
+							public class IfStatementsContinued {
+							  public static void main(String[] args) {
+							    Integer numberToCheck = 5;
+
+							    if (numberToCheck < 0) {
+							      System.out.println("The number is too small");
+							    } else if (numberToCheck > 100){
+							      System.out.println("The number is too large");
+							    } else {
+							       System.out.println("The number is between 0 and 100");
+							    }
+							  }
+							}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>Exercises</h2>
+					<h4>Variables and Basic Operators</h4>
+					<p><a href="https://ben-woolley.github.io/java-for-beginners/exercises/exercise-list-lesson2">click here for the exercise sheet</a></p>
+				</section>
 			</div>
 		</div>
 
