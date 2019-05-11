@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<!-- Common Head -->
+		<meta charset="utf-8">
+	  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
+
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	  <link rel="stylesheet" href="css/reset.css">
+	  <link rel="stylesheet" href="css/reveal.css">
+	  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
+
+	  <!-- Theme used for syntax highlighting of code -->
+	  <link rel="stylesheet" href="lib/css/github.css">
+
+	  <!-- Printing and PDF exports -->
+	  <script>
+	    var link = document.createElement( 'link' );
+	    link.rel = 'stylesheet';
+	    link.type = 'text/css';
+	    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	    document.getElementsByTagName( 'head' )[0].appendChild( link );
+	  </script>
+
+	  <!--[if lt IE 9]>
+	  <script src="lib/js/html5shiv.js"></script>
+	  <![endif]-->
+		<!-- End Common Head -->
+
+		<title>Java for beginners - The basic building blocks of programming part 2</title>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Lesson 2.2</h2>
+					<p>The basic building blocks of programming - Lists and Loops</p>
+				</section>
+				<section>
+					Lesson Outcomes
+					<section>
+						<p>By The end of this lesson you should:</p>
+						<ul>
+							<li>Have run your first program in Java</li>
+							<li>"Translated" some of your pseudocode into a runnable program</li>
+							<li>Have used some of Java's <strong>provided functionality</strong></li>
+							<li>Be able to read and understand a Java program</li>
+						</ul>
+					</section>
+					<section>
+						<p>In this lesson we'll be meeting more of Java, and its <strong>syntax</strong> that corresponds to our pseudocode</p>
+						<p>We'll be meeting a few more aspects of programming, alongside some old ones:</p>
+						<ul>
+							<li><strong>Collections</strong> and <strong>Loops</strong></li>
+							<li><strong>Rules and Conventions</strong> of Java</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					Collections
+					<section>
+						<p>A Collection is a data type that holds a bunch of another data type</p>
+						<p>These are usually defined as:</p>
+						<pre><code data-trim data-line-numbers class="java">
+						CollectionType&lt;TypeItContains&gt; collectionOfSomething;
+						</code></pre>
+					</section>
+					<section>
+						<p>An example creating some collections:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							import java.util.List;
+							import java.util.Set;
+							import java.util.Queue;
+
+							import java.util.ArrayList;
+							import java.util.HashSet;
+							import java.util.ArrayDeque;
+
+							public class UsingCollections {
+							  public static void main(String[] args) {
+							    List&lt;String&gt; listOfStrings = new ArrayList&lt;&gt;();
+							    Set&lt;Integer&gt; setOfIntegers = new HashSet&lt;&gt;();
+							    Queue&lt;Boolean&gt; queueOfBooleans = new ArrayDeque&lt;&gt;();
+							  }
+							}
+						</code></pre>
+						<p>Notice that we have to <strong>import</strong> these types, this is because they are not part of the core language.</p>
+					</section>
+				</section>
+				<section>
+					for-loops
+					<section>
+						<h2>For each</h2>
+						<p>Much like pseudocode says "for each item in the list", we can do this:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							import java.util.List;
+							import java.util.Arrays;
+
+							public class UsingForEach {
+							  public static void main(String[] args) {
+							    List&lt;String&gt; alphabet = Arrays.asList("a", "b", "c");
+							    for (String letter : alphabet) {
+							      System.out.println(letter);
+							    }
+							  }
+							}
+						</code></pre>
+						<p>where "letter" is a name we chose for the current element in the list</p>
+					</section>
+					<section>
+						<h2>For with counter</h2>
+						<p>Much like pseudocode says "for a counter from lower bound to upper bound", we can do this:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							public class UsingForWithCounter {
+							  public static void main(String[] args) {
+							    for (Integer counter = 1; counter <= 10; counter = counter + 1) {
+							      System.out.println("Number " + counter);
+							    }
+							  }
+							}
+						</code></pre>
+					</section>
+					<section>
+						<p>The "for a counter from lower bound to upper bound" code is made of 3 parts</p>
+						<pre><code data-trim data-line-numbers class="java">
+						for (Integer counter = 1; counter <= 10; counter = counter + 1) {
+						  System.out.println("Number " + counter);
+						}
+						</code></pre>
+						<ol>
+							<li><strong>Integer counter = 1;</strong> - Create an Integer variable called counter, set it to 1</li>
+							<li><strong>counter <= 10;</strong> - Continue looping until <strong>counter</strong> is greater than 10</li>
+							<li><strong>counter = counter + 1</strong> - After each run of the loop, set the counter to its value plus 1</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					while-loop
+					<section>
+						<p>This is very similar to our pseudocode:</p>
+						<pre><code data-trim data-line-numbers class="java">
+							Boolean condition = true;
+							while (condition) {
+							  System.out.println("I'm stuck here forever");
+							}
+						</code></pre>
+						<p>This particular while-loop will run forever, because it contains no logic to set <strong>condition</strong> to false.</p>
+					</section>
+				</section>
+				<section>
+					<h2>Code Structure</h2>
+
+				</section>
+				<section>
+					Coding Conventions
+					<section>
+
+					</section>
+				</section>
+
+				<section>
+					<h2>Exercises</h2>
+					<h4>Lists and Loops</h4>
+					<p><a href="https://ben-woolley.github.io/java-for-beginners/exercises/exercise-list-lesson2">click here for the exercise sheet</a></p>
+				</section>
+			</div>
+		</div>
+
+		<!-- common script -->
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+		<!-- end common script -->
+	</body>
+</html>
