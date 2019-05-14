@@ -44,7 +44,7 @@
 				<section>
 					Lesson Outcomes
 					<section>
-						<p>By The end of this lesson you should:</p>
+						<p>By the end of this lesson you should:</p>
 						<ul>
 							<li>Have run your first program in Java</li>
 							<li>"Translated" some of your pseudocode into a runnable program</li>
@@ -86,8 +86,8 @@
 						}
 						</code></pre>
 						<p>Lines 1 and 5 define a <strong>class</strong></p>
-						<p>A class lets you bundle related functionality into one file, and use it in another</p>
-						<p>All functionality must be defined inside a class, only <strong>package</strong> and <strong>import</strong> go outside.</p>
+						<p>A class lets you bundle related functionality into one file, and can then be used in another class.</p>
+						<p>All code must be defined inside a class!</p>
 					</section>
 					<section>
 						<pre><code data-trim data-line-numbers="2,4" class="java">
@@ -98,7 +98,7 @@
 						}
 						</code></pre>
 						<p>Lines 2 and 4 define the <strong>main method</strong></p>
-						<p>The main method is the starting point of every Java program, and must be written like this</p>
+						<p>The main method is the starting point of every Java program, and must be written in this way.</p>
 						<p>When the program is run, whatever is inside the main runs.</p>
 					</section>
 					<section>
@@ -109,7 +109,7 @@
 						  }
 						}
 						</code></pre>
-						<p>Line 3 is a method call (using a method) on <strong>System</strong>, in this case to output a piece of text (a <strong>String</strong>) to the terminal/console.</p>
+						<p>Line 3 is a method call which prints (outputs) a piece of text (a <strong>String</strong>) to the terminal/console.</p>
 					</section>
 					<section>
 						<small>Bonus slide, the main method</small>
@@ -154,7 +154,7 @@
 					Types
 					<section>
 						<p>As mentioned before, Java is <strong>strictly typed</strong></p>
-						<p>meaning you need to tell and stick to the type you give things.</p>
+						<p>meaning you need to provide (and then stick to) the type you give things.</p>
 						<p>Java provides the fundamental types with which people can (and have) built everything</p>
 						<p>Among those are basic <strong>data types</strong> that we are concerned with:</p>
 						<ul>
@@ -178,7 +178,6 @@
 					}
 					</code></pre>
 					<p>Notice that we can use + to append/glue Strings to each other.</p>
-					<p>This works for other types too, Java does the conversion to String for us.</p>
 				</section>
 				<section>
 					Numbers
@@ -249,7 +248,7 @@
 							    Integer greaterThan = 1 > 2;
 							    Integer lessThanOrEqual = 1 <= 2;
 							    Integer greaterThanOrEqual = 1 >= 2;
-							    Double equal = 1 == 2; // note it is two equals
+							    Double equal = 1 == 2; // note it is two equals signs
 							  }
 							}
 						</code></pre>
@@ -272,7 +271,7 @@
 					</section>
 					<section>
 						<h2>AND &&</h2>
-						<p>AND is only true if both the left and right value are true.</p>
+						<p>AND is only true if both the left <strong>and</strong> right value are true.</p>
 						<table>
 						  <tr>
 						    <th></th>
@@ -280,12 +279,12 @@
 						    <th>false</th>
 						  </tr>
 						  <tr>
-						    <td>true</td>
+							  <td><strong>true</strong></td>
 						    <td>true</td>
 						    <td>false</td>
 						  </tr>
 						  <tr>
-						    <td>false</td>
+							  <td><strong>false</strong></td>
 						    <td>false</td>
 						    <td>false</td>
 						  </tr>
@@ -293,7 +292,8 @@
 					</section>
 					<section>
 						<h2>OR ||</h2>
-						<p>OR is only false if both the left and right value are false.</p>
+						<p>OR is true if either the left <strong>or</strong> right value are true.</p>
+						<p>It is only false when <strong>both</strong> values are false.</p>
 						<p>This is also known as inclusive OR</p>
 						<table>
 						  <tr>
@@ -302,12 +302,12 @@
 						    <th>false</th>
 						  </tr>
 						  <tr>
-						    <td>true</td>
+							  <td><strong>true</strong></td>
 						    <td>true</td>
 						    <td>true</td>
 						  </tr>
 						  <tr>
-						    <td>false</td>
+							  <td><strong>false</strong></td>
 						    <td>true</td>
 						    <td>false</td>
 						  </tr>
@@ -335,7 +335,7 @@
 				<section>
 					if-statements
 					<section>
-						<p>Another familiar tool, give us <strong>conditional execution</strong> in our code.</p>
+						<p>Another familiar tool, <strong>if</strong> gives us <strong>conditional execution</strong> in our code.</p>
 						<pre><code data-trim data-line-numbers class="java">
 							public class IfStatements {
 							  public static void main(String[] args) {
@@ -353,10 +353,10 @@
 							  }
 							}
 						</code></pre>
-						<p>In these examples we're using a Boolean variable, you can however inline any expression that returns a Boolean.</p>
+						<p>In these examples we're using a Boolean variable, but you can use any expression that returns a Boolean.</p>
 					</section>
 					<section>
-						<p>This example compares</p>
+						<p>This example compares numbers</p>
 						<pre><code data-trim data-line-numbers class="java">
 							public class IfStatementsContinued {
 							  public static void main(String[] args) {
