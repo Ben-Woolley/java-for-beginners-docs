@@ -1,191 +1,210 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- Common Head -->
-		<meta charset="utf-8">
-	  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<head>
+  <!-- Common Head -->
+  <meta charset="utf-8">
+  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	  <link rel="stylesheet" href="css/reset.css">
-	  <link rel="stylesheet" href="css/reveal.css">
-	  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
 
-	  <!-- Theme used for syntax highlighting of code -->
-	  <link rel="stylesheet" href="lib/css/github.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/github.css">
 
-	  <!-- Printing and PDF exports -->
-	  <script>
-	    var link = document.createElement( 'link' );
-	    link.rel = 'stylesheet';
-	    link.type = 'text/css';
-	    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	    document.getElementsByTagName( 'head' )[0].appendChild( link );
-	  </script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 
-	  <!--[if lt IE 9]>
-	  <script src="lib/js/html5shiv.js"></script>
-	  <![endif]-->
-		<!-- End Common Head -->
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <!-- End Common Head -->
 
-		<title>Java for beginners - Intro, installation and setup</title>
+  <title>Java for beginners - Intro, installation and setup</title>
 
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Lesson 0</h2>
-					<p>Intro, installation and setup</p>
-				</section>
-				<section>
-					Lesson Outcomes
-					<section>
-						<p>By the end of this lesson you should:</p>
-						<ul>
-							<li>Know what you will aim to learn in the course</li>
-							<li>Have your machine ready to build and run Java code</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					Welcome to Java for Beginners!
-					<section>
-						<p>This course is intended to be an introduction to <strong>programming that happens to be in Java</strong>.</p>
-						<p>Many of the concepts you learn here are in the vast majority of programming languages out there; each one being a different tool for different jobs!</p>
-					</section>
-					<section>
-						<p>By the end of this course I hope you will have an awareness or understanding of:</p>
-						<ul>
-							<li>The fundamental concepts that programming languages feature</li>
-							<li>Some basic object-oriented programming concepts</li>
-						</ul>
-					</section>
-					<section>
-						<p>...and the ability to:</p>
-						<ul>
-							<li>Solve problems by "translating English into Java"</li>
-							<li>Write small, interactive, multi-file Java programs</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					How do programs run on your computer?
-					<section>
-						<p>Computers understand a fundamental set of instructions.</p>
-						<p class="fragment">These instructions are however very primitive and way too low-level for everyone to write programs in.</p>
-						<p class="fragment">Programming languages sit on top of these primitive instructions and give us a more human-friendly set of tools.</p>
-					</section>
-					<section>
-						<p>The world now has more programming languages than it knows what to do with - built not only on top of machine code but also on each other.</p>
-						<p class="fragment">Each has it's own specialty or opinions that makes it the best for certain jobs, for example:</p>
-						<ul>
-							<li class="fragment"><small><strong>C</strong> is a language written originally for building operating systems for computers. It exposes enough of the machine level to let clever people do magic, and dangerous people cause many more bugs.</small></li>
-							<li class="fragment"><small><strong>R</strong> specializes in statistical computing</small></li>
-							<li class="fragment"><small><strong>Python</strong> is a general-purpose language focusing on readability</small></li>
-						</ul>
-					</section>
-					<section>
-						<p>These languages end up running on computers in one of two ways:</p>
-						<ul>
-							<li class="fragment"><small>The program source code is <strong>compiled</strong> (aka translated) to machine-understandable code <strong>before it can be run</strong>.</small>
-								<ul><li><small>e.g. C, C++, Java*</small></li></ul>
-							</li>
-							<li class="fragment"><small>An <strong>interpreter</strong> runs the program that knows how to turn your source into machine-understandable code <strong>while it runs</strong>.</small>
-								<ul><li><small>e.g. Python, Java*</small></li></ul>
-							</li>
-						</ul>
-						<div class="fragment">
-							<p>Java actually does both!</p>
-							<small>Java source is compiled to Java Virtual Machine (JVM) bytecode, which the JVM installed on supported machines can then interpret!</small>
-						</div>
-					</section>
-				</section>
-				<section>
-					What is Java?
-					<section>
-						<p>Java is one of the most popular programming languages used today! It is:</p>
-						<ul>
-							<li>Object-oriented - You have objects of certain types, that have properties and ways to interact with those properties.</li>
-						  <li>Class-based - You define the blueprints for objects before you create them.</li>
-						</ul>
-					</section>
-					<section>
-						<p>Java is designed to be runnable everywhere by use of the Java Virtual Machine (JVM).</p>
-						<p>The JVM is written to run on most machines, and Java is compiled (converted) to a language that runs on the JVM.</p>
-						<p><strong>Write Once, Run Anywhere</strong> is one of the biggest advantages of Java.</p>
-					</section>
-					<section>
-						<p>Because Java is used everywhere, it's used for many things.</p>
-						<p class="fragment">It is used across Expedia Group for most of the functionality of our websites.</p>
-						<div class="fragment">
-							<p>It has also been used to write:</p>
-									<ul>
-										<li class="fragment">Simulations</li>
-										<li class="fragment">Video games</li>
-										<li class="fragment">Development tools (like the one we'll be using)</li>
-										<li class="fragment">Android apps*</li>
-									</ul>
-							 <small class="fragment">(*In a sense, they use the same language, but Android doesn't use the JVM)</small>
-						</div>
-					</section>
-				</section>
-				<section>
-					Common pitfalls
-					<section>
-						<p>As with learning most things, we all make the same mistakes and assumptions, here's a list of what I've noticed while teaching this course.</p>
-						<ul>
-							<li class="fragment"><strong>You can refer to the lesson material while doing exercises</strong> - it's not an exam, treat it like you're solving any problem.</li>
-							<li class="fragment"><strong>Lines that don't end in a bracket of some sort must end with a semicolon</strong> - this is so Java knows the <Strong>expression</strong> you're writing is done.</li>
-						</ul>
-					</section>
-					<section>
-						<ul>
-							<li><strong>Java is case sensitive</strong> - you must match the case and be consistent with your naming, otherwise your program will break!</li>
-							<li class="fragment"><strong>Every open bracket, brace, and parenthesis must have a matching close</strong> - this is how Java knows what context something is happening in. If they're in the wrong place you're likely going to run into problems.</li>
-						</ul>
-					</section>
-					<section>
-						<ul>
-							<li><strong>If your program is in an unhappy state please ask for help!</strong> - It's much easier for us to fix something as soon as it goes wrong, rather than after you finish writing and it won't compile.</li>
-							<li class="fragment"><strong>Coding is both a science and an art</strong> - There usually is more than one way of solving a problem. By all means consult with your fellow learners, but don't panic if their solutions are not the same as yours.</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					Setup
-					<section>
-						<p>In this lesson we are going to get your machine ready for writing, compiling, and running Java programs:</p>
-						<ol>
-							<li>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK (Java Development Kit)</a></li>
-							<li><a href="https://www.jetbrains.com/idea/download">IntelliJ IDEA Community Edition</a></li>
-						</ol>
-						<p>We are then going to <strong>download</strong> the <a href="https://github.com/Ben-Woolley/java-for-beginners/archive/master.zip" download>the java project zip</a>, unzip, and import it into IntelliJ</p>
-					</section>
-				</section>
-			</div>
-		</div>
+</head>
 
-		<!-- common -->
-		<script src="js/reveal.js"></script>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Lesson 0</h2>
+        <p>Intro, installation and setup</p>
+      </section>
+      <section>
+        Lesson Outcomes
+        <section>
+          <p>By the end of this lesson you should:</p>
+          <ul>
+            <li>Know what you will aim to learn in the course</li>
+            <li>Have your machine ready to build and run Java code</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        Welcome to Java for Beginners!
+        <section>
+          <p>This course is intended to be an introduction to <strong>programming that happens to be in Java</strong>.</p>
+          <p>Many of the concepts you learn here are in the vast majority of programming languages out there; each one being a different tool for different jobs!</p>
+        </section>
+        <section>
+          <p>By the end of this course I hope you will have an awareness or understanding of:</p>
+          <ul>
+            <li>The fundamental concepts that programming languages feature</li>
+            <li>Some basic object-oriented programming concepts</li>
+          </ul>
+        </section>
+        <section>
+          <p>...and the ability to:</p>
+          <ul>
+            <li>Solve problems by "translating English into Java"</li>
+            <li>Write small, interactive, multi-file Java programs</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        How do programs run on your computer?
+        <section>
+          <p>Computers understand a fundamental set of instructions.</p>
+          <p class="fragment">These instructions are however very primitive and way too low-level for everyone to write programs in.</p>
+          <p class="fragment">Programming languages sit on top of these primitive instructions and give us a more human-friendly set of tools.</p>
+        </section>
+        <section>
+          <p>The world now has more programming languages than it knows what to do with - built not only on top of machine code but also on each other.</p>
+          <p class="fragment">Each has it's own specialty or opinions that makes it the best for certain jobs, for example:</p>
+          <ul>
+            <li class="fragment"><small><strong>C</strong> is a language written originally for building operating systems for computers. It exposes enough of the machine level to let clever people do magic, and dangerous people cause many more
+                bugs.</small></li>
+            <li class="fragment"><small><strong>R</strong> specializes in statistical computing</small></li>
+            <li class="fragment"><small><strong>Python</strong> is a general-purpose language focusing on readability</small></li>
+          </ul>
+        </section>
+        <section>
+          <p>These languages end up running on computers in one of two ways:</p>
+          <ul>
+            <li class="fragment"><small>The program source code is <strong>compiled</strong> (aka translated) to machine-understandable code <strong>before it can be run</strong>.</small>
+              <ul>
+                <li><small>e.g. C, C++, Java*</small></li>
+              </ul>
+            </li>
+            <li class="fragment"><small>An <strong>interpreter</strong> runs the program that knows how to turn your source into machine-understandable code <strong>while it runs</strong>.</small>
+              <ul>
+                <li><small>e.g. Python, Java*</small></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="fragment">
+            <p>Java actually does both!</p>
+            <small>Java source is compiled to Java Virtual Machine (JVM) bytecode, which the JVM installed on supported machines can then interpret!</small>
+          </div>
+        </section>
+      </section>
+      <section>
+        What is Java?
+        <section>
+          <p>Java is one of the most popular programming languages used today! It is:</p>
+          <ul>
+            <li>Object-oriented - You have objects of certain types, that have properties and ways to interact with those properties.</li>
+            <li>Class-based - You define the blueprints for objects before you create them.</li>
+          </ul>
+        </section>
+        <section>
+          <p>Java is designed to be runnable everywhere by use of the Java Virtual Machine (JVM).</p>
+          <p>The JVM is written to run on most machines, and Java is compiled (converted) to a language that runs on the JVM.</p>
+          <p><strong>Write Once, Run Anywhere</strong> is one of the biggest advantages of Java.</p>
+        </section>
+        <section>
+          <p>Because Java is used everywhere, it's used for many things.</p>
+          <p class="fragment">It is used across Expedia Group for most of the functionality of our websites.</p>
+          <div class="fragment">
+            <p>It has also been used to write:</p>
+            <ul>
+              <li class="fragment">Simulations</li>
+              <li class="fragment">Video games</li>
+              <li class="fragment">Development tools (like the one we'll be using)</li>
+              <li class="fragment">Android apps*</li>
+            </ul>
+            <small class="fragment">(*In a sense, they use the same language, but Android doesn't use the JVM)</small>
+          </div>
+        </section>
+      </section>
+      <section>
+        Common pitfalls
+        <section>
+          <p>As with learning most things, we all make the same mistakes and assumptions, here's a list of what I've noticed while teaching this course.</p>
+          <ul>
+            <li class="fragment"><strong>You can refer to the lesson material while doing exercises</strong> - it's not an exam, treat it like you're solving any problem.</li>
+            <li class="fragment"><strong>Lines that don't end in a bracket of some sort must end with a semicolon</strong> - this is so Java knows the <Strong>expression</strong> you're writing is done.</li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li><strong>Java is case sensitive</strong> - you must match the case and be consistent with your naming, otherwise your program will break!</li>
+            <li class="fragment"><strong>Every open bracket, brace, and parenthesis must have a matching close</strong> - this is how Java knows what context something is happening in. If they're in the wrong place you're likely going to run into
+              problems.</li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li><strong>If your program is in an unhappy state please ask for help!</strong> - It's much easier for us to fix something as soon as it goes wrong, rather than after you finish writing and it won't compile.</li>
+            <li class="fragment"><strong>Coding is both a science and an art</strong> - There usually is more than one way of solving a problem. By all means consult with your fellow learners, but don't panic if their solutions are not the same as
+              yours.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        Setup
+        <section>
+          <p>In this lesson we are going to get your machine ready for writing, compiling, and running Java programs:</p>
+          <ol>
+            <li>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK (Java Development Kit)</a></li>
+            <li><a href="https://www.jetbrains.com/idea/download">IntelliJ IDEA Community Edition</a></li>
+          </ol>
+          <p>We are then going to <strong>download</strong> the <a href="https://github.com/Ben-Woolley/java-for-beginners/archive/master.zip" download>the java project zip</a>, unzip, and import it into IntelliJ</p>
+        </section>
+      </section>
+    </div>
+  </div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-		<!-- end common -->
-	</body>
+  <!-- common -->
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true
+        }
+      ]
+    });
+  </script>
+  <!-- end common -->
+</body>
+
 </html>
