@@ -1,403 +1,415 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- Common Head -->
-		<meta charset="utf-8">
-	  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<head>
+  <!-- Common Head -->
+  <meta charset="utf-8">
+  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	  <link rel="stylesheet" href="css/reset.css">
-	  <link rel="stylesheet" href="css/reveal.css">
-	  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
 
-	  <!-- Theme used for syntax highlighting of code -->
-	  <link rel="stylesheet" href="lib/css/github.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/github.css">
 
-	  <!-- Printing and PDF exports -->
-	  <script>
-	    var link = document.createElement( 'link' );
-	    link.rel = 'stylesheet';
-	    link.type = 'text/css';
-	    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	    document.getElementsByTagName( 'head' )[0].appendChild( link );
-	  </script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 
-	  <!--[if lt IE 9]>
-	  <script src="lib/js/html5shiv.js"></script>
-	  <![endif]-->
-		<!-- End Common Head -->
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <!-- End Common Head -->
 
-		<title>Java for beginners - The basic building blocks of programming</title>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Lesson 2</h2>
-					<p>The basic building blocks of programming</p>
-				</section>
-				<section>
-					Lesson Outcomes
-					<section>
-						<p>By the end of this lesson you should:</p>
-						<ul>
-							<li>Have run your first program in Java</li>
-							<li>"Translated" some of your pseudocode into a runnable program</li>
-							<li>Have used some of Java's <strong>provided functionality</strong></li>
-							<li>Be able to read and understand a Java program</li>
-						</ul>
-					</section>
-					<section>
-						<p>In this lesson we'll be meeting Java, and its <strong>syntax</strong> that corresponds to our pseudocode</p>
-						<p>We'll be meeting a few more aspects of programming, alongside some old ones:</p>
-						<ul>
-							<li>Variables <strong>and Types</strong></li>
-							<li><strong>Operators</strong> on these types</li>
-							<li><strong>if-statements</strong> (aka Conditional Execution)</li>
-							<li><strong>Collections</strong> and <strong>Loops</strong></li>
-							<li><strong>Rules and Conventions</strong> of Java</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					Hello, world!
-					<section>
-						<p>The first program everyone writes:</p>
-						<pre><code data-trim data-line-numbers class="java">
-						public class HelloWorld {
-						  public static void main(String[] args) {
-						    System.out.println("Hello, world!");
-						  }
-						}
-						</code></pre>
-						<p>There are a few new things here that we'll explain</p>
-					</section>
-					<section>
-						<pre><code data-trim data-line-numbers="1,5" class="java">
-						public class HelloWorld {
-						  public static void main(String[] args) {
-						    System.out.println("Hello, world!");
-						  }
-						}
-						</code></pre>
-						<p>Lines 1 and 5 define a <strong>class</strong></p>
-						<p>A class lets you bundle related functionality into one file, and can then be used in another class.</p>
-						<p>All code must be defined inside a class!</p>
-					</section>
-					<section>
-						<pre><code data-trim data-line-numbers="2,4" class="java">
-						public class HelloWorld {
-						  public static void main(String[] args) {
-						    System.out.println("Hello, world!");
-						  }
-						}
-						</code></pre>
-						<p>Lines 2 and 4 define the <strong>main method</strong></p>
-						<p>The main method is the starting point of every Java program, and must be written in this way.</p>
-						<p>When the program is run, whatever is inside the main runs.</p>
-					</section>
-					<section>
-						<pre><code data-trim data-line-numbers="3" class="java">
-						public class HelloWorld {
-						  public static void main(String[] args) {
-						    System.out.println("Hello, world!");
-						  }
-						}
-						</code></pre>
-						<p>Line 3 is a method call which prints (outputs) a piece of text (a <strong>String</strong>) to the terminal/console.</p>
-					</section>
-					<section>
-						<small>Bonus slide, the main method</small>
-						<pre><code data-trim data-line-numbers class="java">
-						public static void main(String[] args) {
-						  // Your code here
-						}
-						</code></pre>
-						<p>The main method is made of a few key words:</p>
-						<ul>
-							<li>public is an <strong>access modifier</strong> - it says who can see and use this. Everyone can see public definitions.</li>
-							<li>static means only one of the defined things will ever exist, and would be shared between whoever called it.<br/>This means it exists and is usable immediately (very handy for Java).</li>
-							<li>void is the return type - it defines what sort of thing you get back if you use this method in your program. Void however means that nothing is returned.</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					Variables
-					<section>
-						<p>As we've seen before, variables are for storing values we can refer to and update in our program.</p>
-						<p>We've been putting whatever we want into our pseudocode variables, Java is more picky.</p>
-						<p>Java is <strong>strictly typed</strong> - meaning you must provide the <strong>type</strong> of the variable and stick to it</p>
-						<p>This is the general pattern:</p>
-						<pre><code data-trim data-line-numbers class="java">
-							ObjectType nameOfObject = value;
-						</code></pre>
-					</section>
-					<section>
-						<p>Here are some concrete examples:</p>
-						<pre><code data-trim data-line-numbers class="java">
-						public class VariablesAndTypes {
-						  public static void main(String[] args) {
-						    String greeting = "Hello";
-						    Integer myFavouriteNumber = 17;
-						    Boolean isThisJava = true;
-						  }
-						}
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					Types
-					<section>
-						<p>As mentioned before, Java is <strong>strictly typed</strong></p>
-						<p>meaning you need to provide (and then stick to) the type you give things.</p>
-						<p>Java provides the fundamental types with which people can (and have) built everything</p>
-						<p>Among those are basic <strong>data types</strong> that we are concerned with:</p>
-						<ul>
-							<li>Strings (type String)</li>
-							<li>Numbers (types Integer and Double)</li>
-							<li>Booleans or true/false values (type Boolean)</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<h3>String</h3>
-					<p>Represents text in your program, they must be enclosed in quote marks ("")</p>
-					<pre><code data-trim data-line-numbers class="java">
-					public class UsingStrings {
-					  public static void main(String[] args) {
-					    String teacherName = "Ben";
-					    String courseName = "Java for beginners";
-					    String statement = teacherName + " teaches " + courseName;
-					    System.out.println(statement);
-					  }
-					}
-					</code></pre>
-					<p>Notice that we can use + to append/glue Strings to each other.</p>
-				</section>
-				<section>
-					Numbers
-					<section>
-						<p>Java needs you to choose between a number that:</p>
-						<ul>
-							<li>Only does whole numbers (type Integer or Long)</li>
-							<li>Has a decimal place (type Float or Double)</li>
-							<li>Handles even larger numbers (at the cost of memory)</li>
-						</ul>
-						<pre><code data-trim data-line-numbers class="java">
-						public class UsingNumbers {
-						  public static void main(String[] args) {
-						    Integer i1 = 123;
-						    Long l1 = 123l;
-						    Float f1 = 123.45f;
-						    Double d1 = 123.45;
-						  }
-						}
-						</code></pre>
-						<small>You can find out more about these types <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a></small>
-					</section>
-				</section>
-				<section>
-					<h3>Boolean</h3>
-					<p>A true/false value</p>
-					<p>These are used in all decision making, i.e.</p>
-					<ul>
-						<li>if-statements</li>
-						<li>the counter on for loops</li>
-						<li>the check on while loops to continue</li>
-					</ul>
-					<pre><code data-trim data-line-numbers class="java">
-					public class UsingBooleans {
-					  public static void main(String[] args) {
-					    Boolean enabled = true;
-					  }
-					}
-					</code></pre>
-				</section>
-				<section>
-					Operators
-					<section>
-						<h2>Mathematical Operators</h2>
-						<p>Along with the fundamental number types, Java gives us convenient operators to do math:</p>
-						<pre><code data-trim data-line-numbers class="java">
-						public class MathOperators {
-						  public static void main(String[] args) {
-						   Integer plus = 1 + 2;
-						    Integer minus = 1 - 2;
-						    Integer divide = 1 / 2;
-						    Integer multiply = 1 * 2;
-						    Double power = Math.pow(1, 2); // 1 to the power of 2
-						    Integer modulus = 1 % 2; // remainder of 1 divided by 2
-						  }
-						}
-						</code></pre>
-						<p>Note modulus (%) - which is the remainder of integer division, and is more useful than you think it is.</p>
-						<p>These operators follow BODMAS, you can use brackets as normal to control the order.</p>
-					</section>
-					<section>
-						<h2>Comparison Operators</h2>
-						<p>In addition to mathematical calculators, Java also provides handy number comparison:</p>
-						<pre><code data-trim data-line-numbers class="java">
-							public class MathComparisons {
-							  public static void main(String[] args) {
-							    Integer lessThan = 1 < 2;
-							    Integer greaterThan = 1 > 2;
-							    Integer lessThanOrEqual = 1 <= 2;
-							    Integer greaterThanOrEqual = 1 >= 2;
-							    Double equal = 1 == 2; // note it is two equals signs
-							  }
-							}
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					Boolean Operators
-					<section>
-						<h2>Boolean Operators</h2>
-						<p>Java also provides operators for booleans:</p>
-						<pre><code data-trim data-line-numbers class="java">
-							public class BooleanOperators {
-							  public static void main(String[] args) {
-							    Boolean inclusiveOr = true || false;
-							    Boolean and = true && false;
-							    Boolean not = !true;
-							  }
-							}
-						</code></pre>
-					</section>
-					<section>
-						<h2>AND &&</h2>
-						<p>AND is only true if both the left <strong>and</strong> right value are true.</p>
-						<table>
-						  <tr>
-						    <th></th>
-						    <th>true</th>
-						    <th>false</th>
-						  </tr>
-						  <tr>
-							  <td><strong>true</strong></td>
-						    <td>true</td>
-						    <td>false</td>
-						  </tr>
-						  <tr>
-							  <td><strong>false</strong></td>
-						    <td>false</td>
-						    <td>false</td>
-						  </tr>
-						</table>
-					</section>
-					<section>
-						<h2>OR ||</h2>
-						<p>OR is true if either the left <strong>or</strong> right value are true.</p>
-						<p>It is only false when <strong>both</strong> values are false.</p>
-						<p>This is also known as inclusive OR</p>
-						<table>
-						  <tr>
-						    <th></th>
-						    <th>true</th>
-						    <th>false</th>
-						  </tr>
-						  <tr>
-							  <td><strong>true</strong></td>
-						    <td>true</td>
-						    <td>true</td>
-						  </tr>
-						  <tr>
-							  <td><strong>false</strong></td>
-						    <td>true</td>
-						    <td>false</td>
-						  </tr>
-						</table>
-					</section>
-					<section>
-						<h2>NOT !</h2>
-						<p>NOT reverses the boolean it is applied to.</p>
-						<table>
-						  <tr>
-						    <th>original</th>
-						    <th>!original</th>
-						  </tr>
-						  <tr>
-						    <td>true</td>
-						    <td>false</td>
-						  </tr>
-						  <tr>
-						    <td>false</td>
-						    <td>true</td>
-						  </tr>
-						</table>
-					</section>
-				</section>
-				<section>
-					if-statements
-					<section>
-						<p>Another familiar tool, <strong>if</strong> gives us <strong>conditional execution</strong> in our code.</p>
-						<pre><code data-trim data-line-numbers class="java">
-							public class IfStatements {
-							  public static void main(String[] args) {
-							    Boolean condition = true;
+  <title>Java for beginners - The basic building blocks of programming</title>
+</head>
 
-							    if (condition) {
-							      System.out.println("The condition is true");
-							    }
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Lesson 2</h2>
+        <p>The basic building blocks of programming</p>
+      </section>
+      <section>
+        Lesson Outcomes
+        <section>
+          <p>By the end of this lesson you should:</p>
+          <ul>
+            <li>Have run your first program in Java</li>
+            <li>"Translated" some of your pseudocode into a runnable program</li>
+            <li>Have used some of Java's <strong>provided functionality</strong></li>
+            <li>Be able to read and understand a Java program</li>
+          </ul>
+        </section>
+        <section>
+          <p>In this lesson we'll be meeting Java, and its <strong>syntax</strong> that corresponds to our pseudocode</p>
+          <p>We'll be meeting a few more aspects of programming, alongside some old ones:</p>
+          <ul>
+            <li>Variables <strong>and Types</strong></li>
+            <li><strong>Operators</strong> on these types</li>
+            <li><strong>if-statements</strong> (aka Conditional Execution)</li>
+            <li><strong>Collections</strong> and <strong>Loops</strong></li>
+            <li><strong>Rules and Conventions</strong> of Java</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        Hello, world!
+        <section>
+          <p>The first program everyone writes:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+          </code></pre>
+          <p>There are a few new things here that we'll explain</p>
+        </section>
+        <section>
+          <pre><code data-trim data-line-numbers="1,5" class="java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+          </code></pre>
+          <p>Lines 1 and 5 define a <strong>class</strong></p>
+          <p>A class lets you bundle related functionality into one file, and can then be used in another class.</p>
+          <p>All code must be defined inside a class!</p>
+        </section>
+        <section>
+          <pre><code data-trim data-line-numbers="2,4" class="java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+          </code></pre>
+          <p>Lines 2 and 4 define the <strong>main method</strong></p>
+          <p>The main method is the starting point of every Java program, and must be written in this way.</p>
+          <p>When the program is run, whatever is inside the main runs.</p>
+        </section>
+        <section>
+          <pre><code data-trim data-line-numbers="3" class="java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+          </code></pre>
+          <p>Line 3 is a method call which prints (outputs) a piece of text (a <strong>String</strong>) to the terminal/console.</p>
+        </section>
+        <section>
+          <small>Bonus slide, the main method</small>
+          <pre><code data-trim data-line-numbers class="java">
+public static void main(String[] args) {
+  // Your code here
+}
+          </code></pre>
+          <p>The main method is made of a few key words:</p>
+          <ul>
+            <li>public is an <strong>access modifier</strong> - it says who can see and use this. Everyone can see public definitions.</li>
+            <li>static means only one of the defined things will ever exist, and would be shared between whoever called it.<br />This means it exists and is usable immediately (very handy for Java).</li>
+            <li>void is the return type - it defines what sort of thing you get back if you use this method in your program. Void however means that nothing is returned.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        Variables
+        <section>
+          <p>As we've seen before, variables are for storing values we can refer to and update in our program.</p>
+          <p>We've been putting whatever we want into our pseudocode variables, Java is more picky.</p>
+          <p>Java is <strong>strictly typed</strong> - meaning you must provide the <strong>type</strong> of the variable and stick to it</p>
+          <p>This is the general pattern:</p>
+          <pre><code data-trim data-line-numbers class="java">
+ObjectType nameOfObject = value;
+          </code></pre>
+        </section>
+        <section>
+          <p>Here are some concrete examples:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class VariablesAndTypes {
+  public static void main(String[] args) {
+    String greeting = "Hello";
+    Integer myFavouriteNumber = 17;
+    Boolean isThisJava = true;
+  }
+}
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        Types
+        <section>
+          <p>As mentioned before, Java is <strong>strictly typed</strong></p>
+          <p>meaning you need to provide (and then stick to) the type you give things.</p>
+          <p>Java provides the fundamental types with which people can (and have) built everything</p>
+          <p>Among those are basic <strong>data types</strong> that we are concerned with:</p>
+          <ul>
+            <li>Strings (type String)</li>
+            <li>Numbers (types Integer and Double)</li>
+            <li>Booleans or true/false values (type Boolean)</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h3>String</h3>
+        <p>Represents text in your program, they must be enclosed in quote marks ("")</p>
+        <pre><code data-trim data-line-numbers class="java">
+public class UsingStrings {
+  public static void main(String[] args) {
+    String teacherName = "Ben";
+    String courseName = "Java for beginners";
+    String statement = teacherName + " teaches " + courseName;
+    System.out.println(statement);
+  }
+}
+        </code></pre>
+        <p>Notice that we can use + to append/glue Strings to each other.</p>
+      </section>
+      <section>
+        Numbers
+        <section>
+          <p>Java needs you to choose between a number that:</p>
+          <ul>
+            <li>Only does whole numbers (type Integer or Long)</li>
+            <li>Has a decimal place (type Float or Double)</li>
+            <li>Handles even larger numbers (at the cost of memory)</li>
+          </ul>
+          <pre><code data-trim data-line-numbers class="java">
+public class UsingNumbers {
+  public static void main(String[] args) {
+    Integer i1 = 123;
+    Long l1 = 123l;
+    Float f1 = 123.45f;
+    Double d1 = 123.45;
+  }
+}
+          </code></pre>
+          <small>You can find out more about these types <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a></small>
+        </section>
+      </section>
+      <section>
+        <h3>Boolean</h3>
+        <p>A true/false value</p>
+        <p>These are used in all decision making, i.e.</p>
+        <ul>
+          <li>if-statements</li>
+          <li>the counter on for loops</li>
+          <li>the check on while loops to continue</li>
+        </ul>
+        <pre><code data-trim data-line-numbers class="java">
+public class UsingBooleans {
+  public static void main(String[] args) {
+    Boolean enabled = true;
+  }
+}
+        </code></pre>
+      </section>
+      <section>
+        Operators
+        <section>
+          <h2>Mathematical Operators</h2>
+          <p>Along with the fundamental number types, Java gives us convenient operators to do math:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class MathOperators {
+  public static void main(String[] args) {
+   Integer plus = 1 + 2;
+    Integer minus = 1 - 2;
+    Integer divide = 1 / 2;
+    Integer multiply = 1 * 2;
+    Double power = Math.pow(1, 2); // 1 to the power of 2
+    Integer modulus = 1 % 2; // remainder of 1 divided by 2
+  }
+}
+          </code></pre>
+          <p>Note modulus (%) - which is the remainder of integer division, and is more useful than you think it is.</p>
+          <p>These operators follow BODMAS, you can use brackets as normal to control the order.</p>
+        </section>
+        <section>
+          <h2>Comparison Operators</h2>
+          <p>In addition to mathematical calculators, Java also provides handy number comparison:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class MathComparisons {
+  public static void main(String[] args) {
+    Integer lessThan = 1 < 2;
+    Integer greaterThan = 1 > 2;
+    Integer lessThanOrEqual = 1 <= 2;
+    Integer greaterThanOrEqual = 1 >= 2;
+    Double equal = 1 == 2; // note it is two equals signs
+  }
+}
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        Boolean Operators
+        <section>
+          <h2>Boolean Operators</h2>
+          <p>Java also provides operators for booleans:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class BooleanOperators {
+  public static void main(String[] args) {
+    Boolean inclusiveOr = true || false;
+    Boolean and = true && false;
+    Boolean not = !true;
+  }
+}
+          </code></pre>
+        </section>
+        <section>
+          <h2>AND &&</h2>
+          <p>AND is only true if both the left <strong>and</strong> right value are true.</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>true</th>
+              <th>false</th>
+            </tr>
+            <tr>
+              <td><strong>true</strong></td>
+              <td>true</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td><strong>false</strong></td>
+              <td>false</td>
+              <td>false</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>OR ||</h2>
+          <p>OR is true if either the left <strong>or</strong> right value are true.</p>
+          <p>It is only false when <strong>both</strong> values are false.</p>
+          <p>This is also known as inclusive OR</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>true</th>
+              <th>false</th>
+            </tr>
+            <tr>
+              <td><strong>true</strong></td>
+              <td>true</td>
+              <td>true</td>
+            </tr>
+            <tr>
+              <td><strong>false</strong></td>
+              <td>true</td>
+              <td>false</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>NOT !</h2>
+          <p>NOT reverses the boolean it is applied to.</p>
+          <table>
+            <tr>
+              <th>original</th>
+              <th>!original</th>
+            </tr>
+            <tr>
+              <td>true</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td>false</td>
+              <td>true</td>
+            </tr>
+          </table>
+        </section>
+      </section>
+      <section>
+        if-statements
+        <section>
+          <p>Another familiar tool, <strong>if</strong> gives us <strong>conditional execution</strong> in our code.</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class IfStatements {
+  public static void main(String[] args) {
+    Boolean condition = true;
 
-							    if (condition) {
-							      System.out.println("The condition is true");
-							    } else {
-							      System.out.println("The condition is false");
-							    }
-							  }
-							}
-						</code></pre>
-						<p>In these examples we're using a Boolean variable, but you can use any expression that returns a Boolean.</p>
-					</section>
-					<section>
-						<p>This example compares numbers</p>
-						<pre><code data-trim data-line-numbers class="java">
-							public class IfStatementsContinued {
-							  public static void main(String[] args) {
-							    Integer numberToCheck = 5;
+    if (condition) {
+      System.out.println("The condition is true");
+    }
 
-							    if (numberToCheck < 0) {
-							      System.out.println("The number is too small");
-							    } else if (numberToCheck > 100){
-							      System.out.println("The number is too large");
-							    } else {
-							       System.out.println("The number is between 0 and 100");
-							    }
-							  }
-							}
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					<h2>Exercises</h2>
-					<h4>Variables and Basic Operators</h4>
-					<p><a href="https://ben-woolley.github.io/java-for-beginners/exercises/exercise-list-lesson2">click here for the exercise sheet</a></p>
-				</section>
-			</div>
-		</div>
+    if (condition) {
+      System.out.println("The condition is true");
+    } else {
+      System.out.println("The condition is false");
+    }
+  }
+}
+          </code></pre>
+          <p>In these examples we're using a Boolean variable, but you can use any expression that returns a Boolean.</p>
+        </section>
+        <section>
+          <p>This example compares numbers</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class IfStatementsContinued {
+  public static void main(String[] args) {
+    Integer numberToCheck = 5;
 
-		<!-- common script -->
-		<script src="js/reveal.js"></script>
+    if (numberToCheck < 0) {
+      System.out.println("The number is too small");
+    } else if (numberToCheck > 100){
+      System.out.println("The number is too large");
+    } else {
+       System.out.println("The number is between 0 and 100");
+    }
+  }
+}
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        <h2>Exercises</h2>
+        <h4>Variables and Basic Operators</h4>
+        <p><a href="https://ben-woolley.github.io/java-for-beginners/exercises/exercise-list-lesson2">click here for the exercise sheet</a></p>
+      </section>
+    </div>
+  </div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-		<!-- end common script -->
-	</body>
+  <!-- common script -->
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true
+        }
+      ]
+    });
+  </script>
+  <!-- end common script -->
+</body>
+
 </html>
