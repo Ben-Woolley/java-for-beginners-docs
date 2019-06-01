@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Common Head -->
+  <meta charset="utf-8">
+  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/github.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <!-- End Common Head -->
+
+  <title>Java for beginners - The basic building blocks of programming part 2</title>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Lesson 3</h2>
+        <p>Classes and Methods</p>
+      </section>
+      <section>
+        Lesson Outcomes
+        <section>
+          <p>Today we’ll be expanding on Java’s capabilities by introducing its object-oriented features.</p>
+          <p>By The end of this lesson you should:</p>
+          <ul>
+            <li>Understand the difference between <strong>classes</strong> and <strong>objects</strong></li>
+            <li>Have created your own classes</li>
+            <li>Have created and used <strong>methods</strong> on your classes, that use the class' internal state</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        Classes
+        <section>
+          <p>So far we've used Java's provided types (e.g. String, Integer).</p>
+          <p>Now we will create our own objects to represent things that exist in our world</p>
+        </section>
+        <section>
+          <p>What if I want to represent a <code>Person</code>, who has a <code>name</code>, <code>age</code> and <code>height</code>?</p>
+          <p>We can do this in Java be defining a <code>class</code> - a blueprint from which we can create many <code>Person</code>s:</p>
+          <pre><code data-trim data-line-numbers class="java">
+public class Person {
+  private String name;
+  private Integer age;
+  private Integer height;
+
+  public Person(String name, Integer age, Integer height) {
+    this.name = name;
+    this.age = age;
+    this.height = height;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Integer getAge() {
+    return age;
+  }
+
+  public Integer getHeight() {
+    return height;
+  }
+}
+          </code></pre>
+        </section>
+        <section>
+          <p>There's a few things going on, so we'll cover these step-by-step</p>
+      </section>
+
+      <section>
+        <pre><code data-trim data-line-numbers="1,3" class="java">
+public class Person {
+...
+}
+        </code></pre>
+        <p>This defines that we’re creating a new blueprint/<code>class</code> which defines a <code>Person</code> - it is <code>public</code> meaning anyone anywhere in another file can use this <code>class</code>.</p>
+      </section>
+      </section>
+      <section>
+        <pre><code data-trim data-line-numbers="2,3,4" class="java">
+public class Person {
+  private String name;
+  private Integer age;
+  private Integer height;
+  ...
+}
+        </code></pre>
+        <p>A <strong>field/property</strong> is a variable that belongs to the <code>class</code> - they are the <strong>internal state</strong> of the class.</p>
+        <p>In this case <code>name</code>, <code>age</code> and <code>height</code> are the state of a <code>Person</code>.</p>
+        <p>These properties are <strong>private</strong> to stop outside access and editing in ways we don't want.</p>
+      </section>
+      <section>
+        <pre><code data-trim data-line-numbers="1,2,3,4,5" class="java">
+public class Person {
+  // fields/properties
+  public Person(String name, Integer age, Integer height) {
+      this.name = name;
+      this.age = age;
+      this.height = height;
+  }
+  ...
+}
+        </code></pre>
+        <p>A <strong>constructor</strong> is the method used to create new <code>Person</code>s.</p>
+        <p>This method creates a new instance of <code>Person</code> and then lets us define what to do with the new <strong>instance</strong></p>
+        <p>In this case <code>name</code>, <code>age</code> and <code>height</code> are <strong>initialized</strong> from the <strong>arguments</strong> of the same name.</p>
+      </section>
+      <section>
+        Methods
+        <section>
+          <pre><code data-trim data-line-numbers="5,6,7" class="java">
+public class Person {
+  this.name = name;
+  // other fields/properties
+  // constructor
+  public String getName() {
+      return name;
+  }
+  // other methods
+}
+          </code></pre>
+          <p><strong>methods</strong> use the internal state of the object to <strong>return</strong> a result.</p>
+          <p>Methods are the only way you'll interact with objects, this lets the creator know that the internal state is always valid.</p>
+        </section>
+      </section>
+
+      <section>
+        <h2>Exercises</h2>
+        <h4>Classes and Methods</h4>
+        <p><a href="https://ben-woolley.github.io/java-for-beginners/exercises/exercise-list-lesson3">click here for the exercise sheet</a></p>
+      </section>
+    </div>
+  </div>
+
+  <!-- common script -->
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true
+        }
+      ]
+    });
+  </script>
+  <!-- end common script -->
+</body>
+
+</html>
