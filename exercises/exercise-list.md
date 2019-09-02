@@ -39,8 +39,8 @@ Write your own "Hello, world!" program, then extend it to take a name as input f
 
 You should use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
 
-### \[OOEV] OddOrEven
-Write a Java program to accept a number and check the number is even or not. Output the `Boolean` value of the result
+### \[OOEV] Odd Or Even
+Write a Java program to accept a number and check the number is odd. Output the `Boolean` value of the result
 
 e.g for a number a = 10 print `true`
 
@@ -59,10 +59,9 @@ print true (a + b = c)
 Write a program that thinks of a random number between 1 and 10.
 Let the user enter a number, if it is correct print "You win!" otherwise print "You lose!".
 
-You will need some way to get a random number within a range, [java has many ways and developers are still arguing over which are the best](https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java).
-`new Random().nextInt(*your upper bound*)` is the shortest (but not necessarily the best) way to get a random Integer.
+You will need some way to get a random number within a range; `new Random().nextInt(*your upper bound*)` is the shortest way to get a random Integer.
 
-You should also use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
+You should also use `UserInputUtil` in the `eca.util` package, you may have to `import` it.
 
 ### \[PYCA] Pythagoras Calculation
 In a `main`, define 2 `Integer` variables for the `side`s of a right-angled triangle.
@@ -70,7 +69,8 @@ Use [Pythagoras' theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) to 
 such as `A right angle triangle with first side length 1 and second side length 2 has third side length 2.2360679775`.
 
 You will have to use `Math.sqrt()` to get the square root of a value.
-This must be **imported** (pulled in from Java) to use, which is done by adding `import java.util.Math;` to the top of your Java file (below the `package`).
+You may want to use `Math.pow()` to square the numbers.
+These must be **imported** (pulled in from Java) to use, which is done by adding `import java.util.Math;` to the top of your Java file (below the `package`).
 
 ### \[BACA] Basic Calculator
 Create a program that takes 3 inputs (using `UserInputUtil` again) individually:
