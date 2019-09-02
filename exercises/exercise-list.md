@@ -14,7 +14,7 @@ In a `main`, define a `String`, `Integer`, and `Boolean` variable.
 2. Print them together in a sentence (which may or may not make sense).
 
 ### \[MAOP] Math Operations
-Write a program that has 2 Integer variables `a` and `b`, print the result of each of applying addition, subtraction, division, multiplication, and modulus of `a` to `b`.
+Write a program that takes 2 integer variables `a` and `b` and prints the result of applying each of these calculations using `a` and `b`: addition, subtraction, division, multiplication, and modulus.
 
 e.g given a = 10 and b = 2, print:
 
