@@ -40,7 +40,7 @@ Write your own "Hello, world!" program, then extend it to take a name as input f
 You should use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
 
 ### \[OOEV] OddOrEven
-Write a Java program to accept a number and check the number is even or not. Output the `Boolean` value of  the result
+Write a Java program to accept a number and check the number is even or not. Output the `Boolean` value of the result
 
 e.g for a number a = 10 print `true`
 
