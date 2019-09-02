@@ -8,7 +8,7 @@
 This exercise list is to practice the content presented in [lecture 2](../lessons/lesson2)
 
 ## \[VABO] Variables and Basic Operators
-### Printing Varaibles
+### Printing Variables
 In a `main`, define a `String`, `Integer`, and `Boolean` variable.
 1. `System.out.println` (print) each of them separately.
 2. Print them together in a sentence (which may or may not make sense).
