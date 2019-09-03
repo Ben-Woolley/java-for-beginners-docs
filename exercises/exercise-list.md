@@ -120,17 +120,6 @@ M: 3
 ### \[TUCO] Time Unit Conversion
 Write a Java program to convert a number of seconds to hours, minutes and seconds.
 
-### \[SWAV] Swap Variable Values
-Write a program that swaps the values of two variables.
-
-___Hint___: Easy read integer:
-```java
-public Integer readInteger() {
-	Integer someInput = Integer.parseInt(new Scanner(System.in).nextLine());
-	return someInput;
-}
-```
-
 ### \[PDTI] Pretty Date/Time
 Use `LocalDate` and `LocalTime` to retrieve information about the current date/time. Print out some of their information in a useful way to you (e.g. "Today is 19 October 2018 and the time is 10:30")
 
