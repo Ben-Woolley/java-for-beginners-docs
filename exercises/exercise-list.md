@@ -3,12 +3,12 @@
 * [Topic 2 Exercises](#exercise-list-topic-2)
 * [Topic 3 Exercises](#exercise-list-topic-3)
 
+Each exercise has a 4-character code. This corresponse to a folder in the `java-for-beginners` project under `src/main/java/eca/exercises`. This folder contains the class or classes in which you can implement your solution to the exercise.
+Some of the exercises even have automated tests! These are under `src/test/java/eca/exercises` in the same corresponding codes.
+
 # Exercise List Topic 2
-
-This exercise list is to practice the content presented in [lecture 2](../lessons/lesson2)
-
-## \[VABO] Variables and Basic Operators
-### Printing Variables
+## Variables and Basic Operators
+### \[PVAR] Printing Variables
 In a `main`, define a `String`, `Integer`, and `Boolean` variable.
 1. `System.out.println` (print) each of them separately.
 2. Print them together in a sentence (which may or may not make sense).
@@ -17,21 +17,24 @@ In a `main`, define a `String`, `Integer`, and `Boolean` variable.
 Write a program that takes 2 integer variables `a` and `b` and prints the result of applying each of these calculations using `a` and `b`: addition, subtraction, division, multiplication, and modulus.
 
 e.g given a = 10 and b = 2, print:
-
-```java
-//print 12 (a+b)
-//print 8 (a-b)
-//etc
+```
+12
+8
+5
+20
+0
 ```
 
 ### \[MCMP] Math Comparisons
 Write a program that takes 2 integer variables `a` and `b` and prints the result of applying each of the following comparisons using `a` and `b`: equal, greater than, less than, greater than or equal to, and less than or equal to.
 
 e.g given a = 10 and b = 2, print:
-```java
-a equals b // false
-a > b // true
-a < b // false
+```
+false
+true
+false
+true
+false
 ```
 
 ### \[HINH] Hello, *Insert name here*!
@@ -40,20 +43,18 @@ Write your own "Hello, world!" program, then extend it to take a name as input f
 You should use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
 
 ### \[OOEV] Odd Or Even
-Write a Java program to accept a number and check the number is odd. Output the `Boolean` value of the result
+Write a Java program to accept a number and check the number is odd. Output the `Boolean` value of the result.
 
 e.g for a number a = 10 print `true`
 
 ### \[SETE] Sum is equal to Expected
-Write a Java program to calculate the sum of two integers and return true if the sum is equal to a third integer
+Write a Java program to calculate the sum of two integers and return true if the sum is equal to a third integer.
 
 e.g for:
-```java
-a = 10
-b = 5
-c = 15
-print true (a + b = c)
-```
+* `a` = 10
+* `b` = 5
+* `c` = 15
+The result should be `true`
 
 ### \[GWNT] Guess What Number I'm Thinking
 Write a program that thinks of a random number between 1 and 10.
@@ -107,14 +108,8 @@ Write a program that prints out the `n` times table in a pretty format e.g
 ```
 
 ### \[SELI] Searching Lists
-Given a list of integers, find and print the largest, find and print the smallest, find and print a specified value (or null if it doesnt exist)
-
-e.g given the following list of integers `[1,2,3,4,5]` and a specified value m = 3 print:
-```java
-Min: 1
-Max: 3
-M: 3
-```
+Given a list of integers, find and print the largest, find and print the smallest, find and print a specified value (or null if it doesnt exist).
+Do this by implementing `findMin`, `findMax`, and `contains` in `SearchingLists`.
 
 ## Advanced and Extra
 ### \[TUCO] Time Unit Conversion
@@ -139,23 +134,24 @@ ___Hint___: You will need to make use of `.toString()`, and `.split()` on a `Str
 
 # Exercise List Topic 3
 
-This is the exercise list for [lesson 3](../lessons/lesson3) - __Classes and Methods__
-
 ## \[CIRC] Circles
-### Exercise 1
-Create a `Circle` class. The class will have the property `diameter` and must implement the following methods:
+Create a `Circle` class. The class will have the property `radius` and must implement the following methods:
 * `getArea` - which returns the area of the circle.
 * `getCircumference` - which returns the circumference of (distance around) the circle
 
-### Exercise 2
-Create a `Product` class. The class will have the properties:
+## \[PROD] Products
+Complete the `Product` class. The class will have the properties:
 * `name` of the product
 * `price` of the product
 * `quantity` of the product purchased
 * `tax` being a percentage tax that applies to the product on purchase
 
-Then create a `InvoicePrinter` class with a function called `printInvoice` function.
-This function will take a `List<Product>` and print a receipt to the console. The receipt must contain:
+To finish the class, create:
+* The fields described above
+* The constructor to populate those fields
+
+Then complete the `InvoicePrinter` class by implementing `printInvoice`.
+This function takes a `List<Product>` and prints a receipt to the console. The receipt must contain:
 * Each item's price with and without tax
 * A summary at the bottom, with at least the total *with and without tax*
 
@@ -167,99 +163,44 @@ You can enhance the receipt however you want after this, for example you could a
 
 
 ## \[BANK] Banking
-### Exericse 1
+### Part 1
 
-* The `Java class` called `BankAccount` is started below. An object of type `BankAccount` represents the basics of a commercial account, it has the following instance variables to hold data:
-   - __AccountHolder__ : String -> represents the name of the person who owns the bank account.
-   - __Balance__ : Integer -> represents the current balance of the account as an integer (i.e no decimals)
-   - __AccountNo__ : String -> represents the number of the account
+Finish the `BankAccount` class, it represents a person's bank account, and enables withdrawal and deposit from their balance.
+It has the following properties:
+* **accountHolder** - the name of the account owner as a `String`
+* **balance** - the current balance as a `Double`
+* **accountNumber** - the bank account number as an `Integer`
 
-```java
-public class BankAccount {
+1. Implement the above properties
+2. Implement a constructor for `BankAccount` which takes in a `String`, `Double`, and `Integer`, to create the bank account.
+3. Implement the `deposit` method.
+This method deposits money into the account.
+4. Implement the `withdraw` method.
+This method takes money out of the account, however:
+   * The balance must not go below zero
+   * Print an error message to the user if they attempt to withdraw to below zero
+5. Implement `toString` to return a useful `String` representation of the account.
+6. Implement `compare`, which prints comparison information of your account compared to someone else's
+   * My name and balance
+   * Their name and balance
+   * The money difference between the accounts
 
-  private String accountHolder;
-  private Integer balance;
-  private String accountNumber;
+### Part 2
 
-// rest of code goes here
+You will now use your completed `BankAccount` to implement `AccountHolder` - a class representing the owner of the account.
 
-}
-```
+An `AccountHolder` has the following properties:
+* **account** - the `BankAccount` held by the account holder
+* **phoneNumber** - the contact number for the account holder
+* **postCode** - the post code for the account holder's home address
 
-a) Write a constructor for the class `BankAccount` which takes in two strings and an integer as arguments (for accountHolder, accountNumber and balance, respectively) and instantiates the instance variables to those values.
-
-b) For the following function, based on the method's signature and name, implement its functionality:
-
-```java
-
-public void deposit(Integer amount) {
- // implement deposit function
-
-}
-
-```
-
-c) Write a method called `toString` that returns the details of the bank account as a string, i.e the name of the account holder, name of the bank account and balance
-
-
-d) Using the following getter methods, create another method that takes a bank account as an argument, and compares two bank accounts. The method should return the name and bank account number of the account with a higher balance
-
-```java
-
-public String getBalance() {
-  return this.balance;
-}
-
-public String getHolderName() {
-  return this.accountHolder;
-}
-
-public String getAccNumber() {
-  return this.accountNumber;
-}
-
-// signature of compare method:
-public String compareAccounts(BankAccount compareAccount);
-
-```
-
-e) Test your methods by instantiating two bank accounts in a class with a main method.
-
-
-### Exercise 2
-
- Using the class and methods from above, create a class called `AccountHolder`. Your AccountHolder should:
-
-* Have a bank account
-* Have a name and contact details (Address/Phone Number etc)
-* Have getter and setter methods for all fields
-* Have methods used to withdraw and deposit. Note: withdrawal should not be possible if the bank account's balance falls below 0.
-* Have a transfer method that takes in an AccountHolder object as an argument and an integer representing the sum to be transfered. That sum will be removed from the "source" account and added to the "destination" account (i.e the account holder who calls the method transfers to the one in the argument). E.g
-
-```java
-AccountHolder bob = new AccountHolder(); // assume Bob has $100 in his BankAccount object
-AccountHolder alice = new AccountHolder(); // assume Alice has $200 in her BankAccount object
-bob.transfer(alice, 100);
-bob.getAccountBalance(); // would return $0
-alice.getAccountBalance(); // would return $300
-
-// think about constraints accordingly, such as using the transfer method when your bank account is negative.
-```
-
-
-Change the code accordingly in the BankAccount class to reflect your AccountHolder implementation.
-
-* In the `HomeWorkMain.java` class, create two instances of an AccountHolder. Using the two instances you should successfully:
-    - be able to get the balance of both account holders' accounts;
-    - be able to use the withdraw method on both;
-    - be able to use the deposit method on both and get the account balances;
-    - be able to transfer money from one account holder to another;
-
-### Tests
-
-The folder `intro-to-java/test/eca/lessons/lesson3/` contains the tests for this exercise. To make sure you get the correct output and your program works as expected, you should run the tests for each exercise in order (`BankAccountTest`, `AccountHolderTest` and then `HomeWorkMainTest`)
-
-
+1. Implement the above fields in `AccountHolder`
+2. Implement the constructor for `AccountHolder`, which takes in a `BankAccount`, `String`, and another `String`, to create the account holder.
+3. Implement the getter methods for each property
+4. Implement `deposit` and `withdraw`, using the **account's** corresponding methods
+5. Implement `transfer` - which performs a bank transfer from one account to the other
+   * It should not permit the transfer if the sender has insufficient funds
+   * It should print an error message telling the user they have insufficient funds
 
 # Credits
 Some exercises inspired/sourced from:
