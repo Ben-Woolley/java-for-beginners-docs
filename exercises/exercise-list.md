@@ -3,7 +3,7 @@
 * [Topic 2 Exercises](#exercise-list-topic-2)
 * [Topic 3 Exercises](#exercise-list-topic-3)
 
-Each exercise has a 4-character code. This corresponse to a folder in the `java-for-beginners` project under `src/main/java/eca/exercises`. This folder contains the class or classes in which you can implement your solution to the exercise.
+Each exercise has a 4-character code. This corresponds to a folder in the `java-for-beginners` project under `src/main/java/eca/exercises`. This folder contains the class or classes in which you can implement your solution to the exercise.
 Some of the exercises even have automated tests! These are under `src/test/java/eca/exercises` in the same corresponding codes.
 
 # Exercise List Topic 2
