@@ -108,10 +108,10 @@ else
           <p>if-statements give us <strong>conditional execution</strong> in our code.</p>
           <p>This enables us to change the program's behavior based on true/false assertions.</p>
           <pre><code data-trim class="nohighlight">
-if (*some condition*)
-  *thing to do if true*
+if (some condition)
+  do something if true
 else
-  *thing to do if false
+  do something if false
         </code></pre>
         </section>
         <section>
@@ -130,8 +130,7 @@ else
         <section>
           <p>Conditions can be chained, if you need more than 2 paths:</p>
           <pre><code data-trim class="nohighlight">
-set user to super user
-if (user is super user)
+if (user is superUser)
   user can do anything
 else if (user is admin)
   user can do admin tasks
@@ -159,7 +158,7 @@ else
           <p>Essentially "Do something for each thing in some collection".</p>
           <pre><code data-trim class="nohighlight">
 for (each item in a collection)
-  *do something with each item
+  do something
           </code></pre>
           <pre><code data-trim class="nohighlight">
 for (each day of the month)
@@ -183,13 +182,13 @@ for (each day of the month)
         <section>
           <h2>for with counter</h2>
           <pre><code data-trim class="nohighlight">
-for (counter from *lowerBound* to *upperBound*)
-  *do something for each value in the range
+for (counter from lowerBound to upperBound)
+  do something
           </code></pre>
           <p>or with a different increment/step</p>
           <pre><code data-trim class="nohighlight">
-for (counter from *lowerBound* to *upperBound*, step *stepValue*)
-  *do something for each value in the range, at the given stepValue
+for (counter from lowerBound to upperBound, step stepValue)
+  do something
         </code></pre>
         </section>
         <section>
@@ -215,8 +214,8 @@ for (counter from 1 to 7)
           <p>Do something a potentially infinite number of times</p>
           <p>The loop stops when the condition becomes true</p>
           <pre><code data-trim class="nohighlight">
-while (*some condition*)
-  * do something, for as many times as the condition stays true
+while (some condition is true)
+  do something
           </code></pre>
           <pre><code data-trim class="nohighlight">
 set counter to 0
@@ -267,7 +266,7 @@ if (I go through the whole list without finding the name)
           <p>Or using a variable, as:</p>
           <pre><code data-trim class="nohighlight">
 set isInTheList to false
-for (each name in the list) do
+for (each name in the list)
   if (that name matches the one I'm looking for)
     set isInTheList to true
   else
