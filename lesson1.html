@@ -1,310 +1,345 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- Common Head -->
-		<meta charset="utf-8">
-	  <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<head>
+    <!-- Common Head -->
+    <meta charset="utf-8">
+    <meta name="author" content="Ben Woolley, Louise Truong, David Thomas, Matei David, Rebecca Plant">
 
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	  <link rel="stylesheet" href="css/reset.css">
-	  <link rel="stylesheet" href="css/reveal.css">
-	  <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/robot-lung.css" id="theme">
 
-	  <!-- Theme used for syntax highlighting of code -->
-	  <link rel="stylesheet" href="lib/css/github.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/github.css">
 
-	  <!-- Printing and PDF exports -->
-	  <script>
-	    var link = document.createElement( 'link' );
-	    link.rel = 'stylesheet';
-	    link.type = 'text/css';
-	    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	    document.getElementsByTagName( 'head' )[0].appendChild( link );
-	  </script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-	  <!--[if lt IE 9]>
-	  <script src="lib/js/html5shiv.js"></script>
-	  <![endif]-->
-		<!-- End Common Head -->
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- End Common Head -->
 
-		<title>Java for beginners - Describing how to solve problems</title>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Lesson 1</h2>
-					<p>Describing how to solve problems</p>
-				</section>
-				<section>
-					Lesson Outcomes
-					<section>
-						<p>By The end of this lesson you should:</p>
-						<ul>
-							<li>Understand how programming languages provide the tools to solve problems</li>
-							<li>Be able to solve problems in a structured format known as pseudocode</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					What is programming?
-					<section>
-						<h2>What programming isn't</h2>
-						<p>Unfortunately programming doesn’t do anything for you on its own.</p>
-						<p>Every piece of functionality on every computer - from the operating system all the way up to this page being drawn from HTML have all been enabled by someone writing that functionality.</p>
-					</section>
-					<section>
-						<h2>What programming is</h2>
-						<p>Programming or software development is essentially <strong>writing the general solution to a problem</strong> in a <strong>strongly structured and limited set of keywords</strong>.</p>
-						<p>So programming doesn’t solve your problems for you, it enables you to:</p>
-						<ul>
-							<li>Use a computer to do the brainwork that you don’t want to do yourself.</li>
-							<li>Automate tasks that you can figure out the solution to.</li>
-						</ul>
-					</section>
-					<section>
-						<p>An Exercise:</p>
-						<p>Imagine a person who has no idea how anything works, but can carry out basic instructions.</p>
-						<br/>
-						<p>How would you tell them how to make a cup of tea?</p>
-						<small>Write down your instructions, we’ll make use of these later.</small>
-					</section>
-				</section>
-				<section>
-					Pseudocode
-					<section>
-						<p>Pseudocode is an almost-bridge between normal English statements and a fully functional programming language.</p>
-						<p>It’s a way of expressing the logic you want to achieve without having to go straight into writing code.</p>
-						<p>It doesn’t have a set syntax (defined structure) but does have the key components of most programming languages.</p>
-					</section>
-					<section>
-						<p>In order to describe solutions to problems, most programming languages provide the following functionality at a minimum:</p>
-					</section>
-				</section>
-				<section>
-					Variables
-					<section>
-						<p>Variables are for storing values we can refer to and update in our program.</p>
-						<pre><code class="nohighlight">set *variableName* to *variableValue*</code></pre>
-						<pre><code data-trim class="nohighlight">
-							set myAge to 24
-							set legalDrinkingAge to 18
-							if (myAge is greater than or equal to legalDrinkingAge)
-							  I can drink
-							else
-							  I cannot drink
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					if-statements
-					<section>
-						<p>if-statements give us <strong>conditional execution</strong> in our code.</p>
-						<p>This enables us to change the program's behavior based on true/false assertions.</p>
-						<pre><code data-trim class="nohighlight">
-							if (*some condition*)
-							  *thing to do if true*
-							else
-							  *thing to do if false
-						</code></pre>
-					</section>
-					<section>
-						<pre><code data-trim class="nohighlight">
-							if (today is Friday)
-							  send a team lunch invitation in outlook
-						</code></pre>
-						<p>an 'else' clause can be added, which is done if the condition is false:</p>
-						<pre><code data-trim class="nohighlight">
-							if (it is the morning and it is the weekend)
-							  stay at home and do nothing
-							else
-							  go to work
-						</code></pre>
-					</section>
-					<section>
-						<p>Conditions can be chained, if you need more than 2 paths:</p>
-						<pre><code data-trim class="nohighlight">
-							set user to super user
-							if (user is super user)
-							  user can do anything
-							else if (user is admin)
-							  user can do admin tasks
-							else
-							  user has no special permissions
-						</code></pre>
-					</section>
-					<section>
-						<h2>Whiteboard Exercise</h2>
-						<p>Write pseudocode for the following:</p>
-						<blockquote>If Polly has been good, Santa will give her a toy. If Polly has been bad, Polly’s gift will be a lump of coal.</blockquote>
-					</section>
-				</section>
-				<section>
-					for-loops
-					<section>
-						<p>For loops enable you to do something multiple times, there are 2 varieties:</p>
-						<ul>
-							<li>for each</li>
-							<li>for with counter</li>
-						</ul>
-					</section>
-					<section>
-						<h2>for each</h2>
-						<p>Essentially "Do something for each thing in some collection".</p>
-						<pre><code data-trim class="nohighlight">
-							for (each item in a collection)
-							  *do something with each item
-						</code></pre>
-						<pre><code data-trim class="nohighlight">
-							for (each day of the month)
-							  display the day, weekday, and events on the day
-						</code></pre>
-					</section>
-					<section>
-						<h2>Whiteboard Exercise</h2>
-						<p>Write pseudocode for the following:</p>
-						<blockquote>Write out a receipt for each item in Santa’s sack of presents.</blockquote>
-					</section>
-					<section>
-						<h2>for with counter</h2>
-						<p>Gives you a counter you can use for whatever you want. You can:</p>
-						<ul>
-							<li>Start at any value</li>
-							<li>End at any value</li>
-							<li>Increment by any value (even downward)</li>
-						</ul>
-					</section>
-					<section>
-						<h2>for with counter</h2>
-						<pre><code data-trim class="nohighlight">
-							for (counter from *lowerBound* to *upperBound*)
-							  *do something for each value in the range
-						</code></pre>
-						<p>or with a different increment/step</p>
-						<pre><code data-trim class="nohighlight">
-							for (counter from *lowerBound* to *upperBound*, step *stepValue*)
-								*do something for each value in the range, at the given stepValue
-						</code></pre>
-					</section>
-					<section>
-						<h2>for with counter</h2>
-						<pre><code data-trim class="nohighlight">
-							set weekDays to [Monday,  Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-							for (counter from 1 to 7)
-							  print the counter, next to to it also print weekDays[counter] (the weekday in the counter'th position)
-						</code></pre>
-					</section>
-					<section>
-						<h2>Whiteboard Exercise</h2>
-						<p>Write pseudocode for the following:</p>
-						<blockquote>Happy Street has house numbers 1-38. Santa wants a list of house numbers printed out so he can tick off each house he’s visited.</blockquote>
-						<p>Extension:</p>
-						<blockquote>Santa is feeling lazy so he only wants to visit every other house. Print a list with every 2nd house instead.</blockquote>
-					</section>
-				</section>
-				<section>
-					while loop
-					<section>
-						<p>Do something a potentially infinite number of times</p>
-						<p>The loop stops when the condition becomes true</p>
-						<pre><code data-trim class="nohighlight">
-							while (*some condition*)
-  						  * do something, for as many times as the condition stays true
-						</code></pre>
-						<pre><code data-trim class="nohighlight">
-							set counter to 0
-							while (counter is less than 10)
-							  print counter
-							  set counter to counter + 1
-						</code></pre>
-					</section>
-					<section>
-						<h2>Whiteboard Exercise</h2>
-						<p>Write pseudocode for the following:</p>
-						<blockquote>Santa doesn’t know how many houses are on Long Street but he knows he’ll get too tired if he visits too many. He will keep visiting houses until he’s visited 108 in total.</blockquote>
-					</section>
-				</section>
-				<section>
-					Examples
-					<section>
-						<p>For example, to decide whether to take out an umbrella today, I’d say</p>
-						<blockquote>If it’s going to rain then I’d take my umbrella.</blockquote>
-						<p>Which I can write in a more structured way as:</p>
-						<pre><code data-trim class="nohighlight">
-							if (it is going to rain)
-							  bring my umbrella
-							else
-							  leave it at home
-						</code></pre>
-					</section>
-					<section>
-						<p>Or to find someone’s name in an unsorted list, I’d say</p>
-						<blockquote>Go through the list until I see the name I’m looking for</blockquote>
-						<p>This is a bit harder to translate, but essentially I’m saying</p>
-						<blockquote>I would check each item in the list, until I find the name or I’ve checked the entire list</blockquote>
-					</section>
-					<section>
-						<p>Which I can now write as:</p>
-						<pre><code data-trim class="nohighlight">
-							for (each name in the list)
-							  if (that name matches the one I'm looking for)
-							    the name is in the list
-							  else
-							    continue through the list
+    <title>Java for beginners - Describing how to solve problems</title>
+</head>
 
-							if (I go through the whole list without finding the name)
-							  the name is not in the list
-						</code></pre>
-					</section>
-					<section>
-						<p>Or using a variable, as:</p>
-						<pre><code data-trim class="nohighlight">
-							set isInTheList to false
-							for (each name in the list) do
-							  if (that name matches the one I'm looking for)
-							    set isInTheList to true
-							  else
-							    continue through the list
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>Lesson 1</h2>
+            <p>Describing how to solve problems</p>
+        </section>
+        <section>
+            Lesson Outcomes
+            <section>
+                <p>By the end of this lesson you should:</p>
+                <ul>
+                    <li>Understand how programming languages provide the tools to solve problems</li>
+                    <li>Be able to solve problems in a structured format known as pseudocode</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            What is programming?
+            <section>
+                <h2>What programming isn't</h2>
+                <p>Unfortunately programming doesn’t do anything for you on its own.</p>
+                <p>Every piece of functionality on every computer - from the operating system all the way up to this page being drawn from HTML have all been enabled by someone
+                    writing that functionality.</p>
+            </section>
+            <section>
+                <h2>What programming is</h2>
+                <p>Programming or software development is essentially <strong>writing the general solution to a problem</strong> in a <strong>strongly structured and limited set of
+                    keywords</strong>.</p>
+                <p>So programming doesn’t solve your problems for you, it enables you to:</p>
+                <ul>
+                    <li>Use a computer to do the brainwork that you don’t want to do yourself.</li>
+                    <li>Automate tasks that you can figure out the solution to.</li>
+                </ul>
+            </section>
+            <section>
+                <p>Whiteboard exercise:</p>
+                <p>Imagine a person who has no idea how anything works, but can carry out basic instructions.</p>
+                <br/>
+                <p>How would you tell them how to make a cup of tea?</p>
+            </section>
+        </section>
+        <section>
+            Pseudocode
+            <section>
+                <p>Pseudocode is an almost-bridge between normal English statements and a fully functional programming language.</p>
+                <p>It’s a way of expressing the logic you want to achieve without having to go straight into writing code.</p>
+                <p>It doesn’t have a set syntax (defined structure) but does have the key components of most programming languages.</p>
+            </section>
+            <section>
+                <p>In order to describe solutions to problems, most programming languages provide the following functionality at a minimum:</p>
+            </section>
+        </section>
+        <section>
+            Variables
+            <section>
+                <p>Variables are for storing values we can refer to and update in our program.</p>
+                <pre><code class="nohighlight">set variableName to variableValue</code></pre>
+                <pre><code data-trim class="nohighlight">
+set myAge to 24
+set legalDrinkingAge to 18
+if (myAge is greater than or equal to legalDrinkingAge)
+  I can drink
+else
+  I cannot drink
+          </code></pre>
+            </section>
+        </section>
+        <section>
+            if-statements
+            <section>
+                <p>if-statements give us <strong>conditional execution</strong> in our code.</p>
+                <p>This enables us to change the program's behavior based on true/false assertions.</p>
+                <pre><code data-trim class="nohighlight">
+if (some condition)
+  do something if true
+else
+  do something if false
+        </code></pre>
+            </section>
+            <section>
+          <pre><code data-trim class="nohighlight">
+if (today is Friday)
+  send a team lunch invitation in outlook
+          </code></pre>
+                <p>an 'else' clause can be added, which is done if the condition is false:</p>
+                <pre><code data-trim class="nohighlight">
+if (it is the morning and it is the weekend)
+  stay at home and do nothing
+else
+  go to work
+        </code></pre>
+            </section>
+            <section>
+                <p>Conditions can be chained, if you need more than 2 paths:</p>
+                <pre><code data-trim class="nohighlight">
+if (user is superUser)
+  user can do anything
+else if (user is admin)
+  user can do admin tasks
+else
+  user has no special permissions
+        </code></pre>
+            </section>
+            <section>
+                <h2>Whiteboard Exercise</h2>
+                <p>Write pseudocode for the following:</p>
+                <blockquote>If Captain Obvious is happy, all customers get a 15% discount. Otherwise, no discounts are available.</blockquote>
+            </section>
+        </section>
+        <section>
+            for-loops
+            <section>
+                <p>For loops enable you to do something multiple times, there are 2 varieties:</p>
+                <ul>
+                    <li>for each</li>
+                    <li>for with counter</li>
+                </ul>
+            </section>
+            <section>
+                <h2>for each</h2>
+                <p>Essentially "Do something for each thing in some collection".</p>
+                <pre><code data-trim class="nohighlight">
+for (each item in a collection)
+  do something
+          </code></pre>
+                <pre><code data-trim class="nohighlight">
+for (each day of the month)
+  display the day, weekday, and events on the day
+        </code></pre>
+            </section>
+            <section>
+                <h2>Whiteboard Exercise</h2>
+                <p>Write pseudocode for the following:</p>
+                <blockquote>A hotel wants confirmation of all the bookings over the next week. Print each booking number from the list <code>thisWeekBookings</code>.</blockquote>
+            </section>
+            <section>
+                <h2>for with counter</h2>
+                <p>Gives you a counter you can use for whatever you want. You can:</p>
+                <ul>
+                    <li>Start at any value</li>
+                    <li>End at any value</li>
+                    <li>Increment by any value (even downward)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>for with counter</h2>
+                <pre><code data-trim class="nohighlight">
+for (counter from lowerBound to upperBound)
+  do something
+          </code></pre>
+                <p>or with a different increment/step</p>
+                <pre><code data-trim class="nohighlight">
+for (counter from lowerBound to upperBound, step stepValue)
+  do something
+        </code></pre>
+            </section>
+            <section>
+                <h2>for with counter</h2>
+                <pre><code data-trim class="nohighlight">
+set weekDays to [Monday,  Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+for (counter from 1 to 7)
+  print the counter, next to to it also print weekDays[counter]
+          </code></pre>
+                <p>Here <code>weekDays[counter]</code> represents the weekday in the counter'th position</p>
+            </section>
+            <section>
+                <h2>Whiteboard Exercise</h2>
+                <p>Write pseudocode for the following:</p>
+                <blockquote>Happy Hotel has 38 rooms. The hotel manager wants a list of room numbers printed out to give to the cleaning staff.</blockquote>
+                <p>Extension:</p>
+                <blockquote>The hotel manager decides to cut down on costs. Print a list with every 2nd room number instead.</blockquote>
+            </section>
+        </section>
+        <section>
+            while loop
+            <section>
+                <p>Do something a potentially infinite number of times</p>
+                <p>The loop stops when the condition becomes true</p>
+                <pre><code data-trim class="nohighlight">
+while (some condition is true)
+  do something
+          </code></pre>
+                <pre><code data-trim class="nohighlight">
+set counter to 0
+while (counter is less than 10)
+  print counter
+  set counter to counter + 1
+        </code></pre>
+            </section>
+            <section>
+                <h2>Whiteboard Exercise</h2>
+                <p>Write pseudocode for the following:</p>
+                <blockquote>Hotels.com is running a giveaway competition and wants to give away as many prizes as possible with a $500,000 budget. Each prize costs $33.29. Keep
+                    giving away prizes until this budget has been used up.
+                </blockquote>
+            </section>
+        </section>
+        <section>
+            Examples
+            <section>
+                <p>For example, to decide whether to take out an umbrella today, I’d say</p>
+                <blockquote>If it’s going to rain then I’d take my umbrella.</blockquote>
+                <p>Which I can write in a more structured way as:</p>
+                <pre><code data-trim class="nohighlight">
+if (it is going to rain)
+  bring my umbrella
+else
+  leave it at home
+        </code></pre>
+            </section>
+            <section>
+                <p>Or to find someone’s name in an unsorted list, I’d say</p>
+                <blockquote>Go through the list until I see the name I’m looking for</blockquote>
+                <p>This is a bit harder to translate, but essentially I’m saying</p>
+                <blockquote>I would check each item in the list, until I find the name or I’ve checked the entire list</blockquote>
+            </section>
+            <section>
+                <p>Which I can now write as:</p>
+                <pre><code data-trim class="nohighlight">
+for (each name in the list)
+  if (that name matches the one I'm looking for)
+    the name is in the list
+  else
+    continue through the list
 
-							if (isInTheList is true)
-							  the name is in the list
-							else
-							  the name is not in the list
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					Exercises
-					<section>
-						<h2>Exercise 1</h2>
-						<p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
-						<p>Give your answer in pseudocode.</p>
-					</section>
-				</section>
-			</div>
-		</div>
+if (I go through the whole list without finding the name)
+  the name is not in the list
+        </code></pre>
+            </section>
+            <section>
+                <p>Or using a variable, as:</p>
+                <pre><code data-trim class="nohighlight">
+set isInTheList to false
+for (each name in the list)
+  if (that name matches the one I'm looking for)
+    set isInTheList to true
+  else
+    continue through the list
 
-		<!-- common script -->
-		<script src="js/reveal.js"></script>
+if (isInTheList is true)
+  the name is in the list
+else
+  the name is not in the list
+        </code></pre>
+            </section>
+        </section>
+        <section>
+            Exercises
+            <section>
+                <h2>Exercise 1</h2>
+                <p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
+                <p>Give your answer in pseudocode.</p>
+            </section>
+            <section>
+                <h2>Exercise 2</h2>
+                <p>Write a program that decides whether I should wear a jacket, and whether I should also take an umbrella out today.</p>
+                <p>Give your answer in pseudocode.</p>
+            </section>
+            <section>
+                <h2>Exercise 3</h2>
+                <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
+                <p>Give your answer in pseudocode.</p>
+            </section>
+            <section>
+                <h2>Exercise 4</h2>
+                <p>Print every number beween 1 and 100 that is a multiple of 5.</p>
+                <p>Give your answer in pseudocode.</p>
+            </section>
+            <section>
+                <h2>Exercise 5</h2>
+                <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
+                <p>Give your answer in pseudocode.</p>
+            </section>
+        </section>
+    </div>
+</div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-		<!-- end common script -->
-	</body>
+<!-- common script -->
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [{
+            src: 'plugin/markdown/marked.js'
+        },
+            {
+                src: 'plugin/markdown/markdown.js'
+            },
+            {
+                src: 'plugin/notes/notes.js',
+                async: true
+            },
+            {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }
+        ]
+    });
+</script>
+<!-- end common script -->
+</body>
+
 </html>
