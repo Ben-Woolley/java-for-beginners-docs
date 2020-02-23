@@ -307,6 +307,82 @@ else
           <p>Give your answer in pseudocode.</p>
         </section>
       </section>
+      <section>
+        Exercise Solutions
+        <section>
+          <p>These are only <b>example</b> solutions.</p>
+          <p>The more strict you are in using pseudocode, the closer your solution is to a functioning program.</p>
+        </section>
+        <section>
+          <h4>Exercise 1</h4>
+          <p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
+          <pre><code data-trim class="nohighlight">
+get a cup and teabag
+place teabag in cup
+fill kettle
+turn on kettle
+wait until kettle is boiled
+if (recipient wants milk)
+  3/4 fill cup using kettle
+  fill remainder of cup with milk
+else
+  fill cup using kettle
+if (recipient wants sugar)
+  add sugar
+serve cup
+        </code></pre>
+        </section>
+        <section>
+          <h2>Exercise 2</h2>
+          <p>Write a program that decides whether I should wear a jacket, and whether I should also take an umbrella out today.</p>
+          <pre><code data-trim class="nohighlight">
+set currentWeather to the current weather
+if (currentWeather is cold)
+  take jacket
+if (currentWeather is rainy)
+  take umbrella
+        </code></pre>
+        <p>Notice that we haven't said how to get the current weather. Pseudocode's job is to let us focus on our own logic, and worry about this later.</p>
+        <p>We also store the current weather in a variable, so we can refer back to it in a consistent way.</p>
+        </section>
+        <section>
+          <h2>Exercise 3</h2>
+          <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
+          <pre><code data-trim class="nohighlight">
+set total to 0
+for (counter from 1 to 10)
+  total = total + counter
+  print counter
+        </code></pre>
+        <p>We start with a counter at zero. We then begin the loop which runs 10 times, the value of counter increasing by 1 each time.</p>
+        <p>So the first run, counter is 1 and total is set to 1, second run counter is 2 and total is set to 1 + 2, third run counter is 3 and total is set to 3 + 3, ...</p>
+        </section>
+        <section>
+          <h2>Exercise 4</h2>
+          <p>Print every number beween 1 and 100 that is a multiple of 5.</p>
+          <pre><code data-trim class="nohighlight">
+for (counter from 1 to 100, step 5)
+  print counter
+        </code></pre>
+        <p>Using a step of 5 means our counter goes up in increments of 5. We need no extra logic to print multiples of 5.</p>
+        </section>
+        <section>
+          <h2>Exercise 5</h2>
+          <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
+          <pre><code data-trim class="nohighlight">
+set redBox to empty
+set greenBox to empty
+set blueBox to empty
+for (each marble in mixedBox)
+  if (marble is red)
+    put marble in redBox
+  if (marble is green)
+    put marble in greenBox
+  if (marble is blue)
+    put marble in blueBox
+        </code></pre>
+        </section>
+      </section>
     </div>
   </div>
 
