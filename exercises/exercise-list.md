@@ -60,7 +60,11 @@ The result would be `true`
 Write a program that thinks of a random number between 1 and 10.
 Let the user enter a number, if it is correct print "You win!" otherwise print "You lose!".
 
-You will need some way to get a random number within a range; `new Random().nextInt(*your upper bound*)` is the shortest way to get a random Integer.
+You will need some way to get a random number within a range: 
+```java
+Integer aRandomNumberFrom1To5 = new Random().nextInt(4) + 1;
+```
+`Random.nextInt` generates a random Integer between 0 and the passed-in number. Adding `+1` bumps this up to a random number between 1 and 5.
 
 You should also use `UserInputUtil` in the `eca.util` package, you may have to `import` it.
 
