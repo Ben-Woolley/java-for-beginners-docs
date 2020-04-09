@@ -71,7 +71,6 @@ such as `A right angle triangle with first side length 1 and second side length 
 
 You will have to use `Math.sqrt()` to get the square root of a value.
 You may want to use `Math.pow()` to square the numbers.
-These must be **imported** (pulled in from Java) to use, which is done by adding `import java.util.Math;` to the top of your Java file (below the `package`).
 
 ### \[BACA] Basic Calculator
 Create a program that takes 3 inputs (using `UserInputUtil` again) individually:
@@ -101,7 +100,7 @@ Make a `List` of the names of your favourite foods (in order of most to least fa
 ### \[NTTA] N Times Table
 Write a program that prints out the `n` times table in a pretty format e.g
 
-```java
+```
 1 X 2 = 2
 2 X 2 = 4
 ...
