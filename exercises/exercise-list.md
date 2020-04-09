@@ -43,18 +43,18 @@ Write your own "Hello, world!" program, then extend it to take a name as input f
 You should use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
 
 ### \[OOEV] Odd Or Even
-Write a Java program to accept a number and check the number is odd. Output the `Boolean` value of the result.
+Write a Java program to accept a number and check the number is odd. You may print the result however you like.
 
-e.g for a number a = 10 print `true`
+e.g for a number a = 10 you could print `10 is even`
 
 ### \[SETE] Sum is equal to Expected
-Write a Java program to calculate the sum of two integers and return true if the sum is equal to a third integer.
+Write a Java program to calculate the sum of two integers and determine if their sum is equal to a third integer.
 
 e.g for:
 * `a` = 10
 * `b` = 5
 * `c` = 15
-The result should be `true`
+The result would be `true`
 
 ### \[GWNT] Guess What Number I'm Thinking
 Write a program that thinks of a random number between 1 and 10.
