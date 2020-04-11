@@ -2,7 +2,7 @@
 This guide will set up your development environment, ready for writing code for the rest of the course.  
 We will download/install:
 * The Java JDK
-* Out IDE - Visual Studio Code (or VSCode)
+* An IDE - Visual Studio Code (or VSCode)
 * The Java 101 code
 
 ## Install a Java JDK
