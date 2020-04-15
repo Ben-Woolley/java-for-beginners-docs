@@ -40,13 +40,13 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <h2>Lesson 1</h2>
+        <h2>Java for beginners</h2>
         <p>Describing how to solve problems</p>
       </section>
       <section>
-        Lesson Outcomes
+        Topic Outcomes
         <section>
-          <p>By the end of this lesson you should:</p>
+          <p>By the end of this topic you should:</p>
           <ul>
             <li>Understand how programming languages provide the tools to solve problems</li>
             <li>Be able to solve problems in a structured format known as pseudocode</li>
@@ -72,12 +72,39 @@
         <section>
           <p>Whiteboard exercise:</p>
           <p>Imagine a person who has no idea how anything works, but can carry out basic instructions.</p>
-          <br />
+          <br/>
           <p>How would you tell them how to make a cup of tea?</p>
+        </section>
+        <section>
+          <p>An example solution could be as simple as:</p>
+          <ol>
+            <li>Grab a cup, teabag, and milk</li>
+            <li>Place the teabag in the cup</li>
+            <li>Fill and turn on kettle</li>
+            <li>Once the kettle is boiled, 3/4 fill the cup using the kettle</li>
+            <li>Fill the remaining space in the cup with milk</li>
+            <li>Remove the teabag</li>
+          </ol>
+        </section>
+        <section>
+          <p>Our solution includes phrases like "fill the cup" and "Remove the teabag".</p>
+          <p>How does someone "fill a cup"?</p>
+          <p>These instructions never mention a spoon, which would be quite painful!</p>
+          <br/>
+          <p><strong>In how much detail do we need to go to adequately describe our solution?</strong></p>
+        </section>
+        <section>
+          <p><strong>The answer is contextual</strong></p>
+          <p>We can safely assume the person knows what pouring is, but not that they would need to turn on a kettle</p>
+          <p>In software we have a different context, the difference between what <strong>basic functions</strong> are provided and what is not.</p>
         </section>
       </section>
       <section>
         Pseudocode
+        <section>
+          <p>Before we dive into Java, we're first going to learn the standard toolbox in most languages.</p>
+          <p>We are going to use Pseudocode to learn these tools, and then transfer our learning into Java.</p>
+        </section>
         <section>
           <p>Pseudocode is an almost-bridge between normal English statements and a fully functional programming language.</p>
           <p>It’s a way of expressing the logic you want to achieve without having to go straight into writing code.</p>
@@ -95,10 +122,13 @@
           <pre><code data-trim class="nohighlight">
 set myAge to 24
 set legalDrinkingAge to 18
-if (myAge is greater than or equal to legalDrinkingAge)
-  I can drink
-else
-  I cannot drink
+          </code></pre>
+        </section>
+        <section>
+          <p>Collections of things are very common in programming, so we can represent those too</p>
+          <pre><code data-trim class="nohighlight">
+set destinations to ["Rome", "Tokyo", "New York"]
+set oddNumbers to [1, 3, 5, 7, 9]
           </code></pre>
         </section>
       </section>
@@ -116,26 +146,31 @@ else
         </section>
         <section>
           <pre><code data-trim class="nohighlight">
-if (today is Friday)
-  send a team lunch invitation in outlook
+set myAge to 24
+set legalDrinkingAge to 18
+if (myAge is greater than or equal to legalDrinkingAge)
+  I can drink
           </code></pre>
           <p>an 'else' clause can be added, which is done if the condition is false:</p>
           <pre><code data-trim class="nohighlight">
-if (it is the morning and it is the weekend)
-  stay at home and do nothing
+set myAge to 24
+set legalDrinkingAge to 18
+if (myAge is greater than or equal to legalDrinkingAge)
+  I can drink
 else
-  go to work
+  I cannot drink
         </code></pre>
         </section>
         <section>
           <p>Conditions can be chained, if you need more than 2 paths:</p>
           <pre><code data-trim class="nohighlight">
-if (user is superUser)
-  user can do anything
-else if (user is admin)
-  user can do admin tasks
+set dayOfWeek to the current day of the week 
+if (dayOfWeek is Saturday)
+  it is the beginning of the weekend
+else if (dayOfWeek is Sunday)
+  it is the last day of the weekend
 else
-  user has no special permissions
+  it is not the weekend
         </code></pre>
         </section>
         <section>
@@ -147,7 +182,12 @@ else
       <section>
         for-loops
         <section>
-          <p>For loops enable you to do something multiple times, there are 2 varieties:</p>
+          <p>With our existing tools, we can do things to a piece of data</p>
+          <p>What if we want to do the same thing to everything in a collection?</p>
+          <p>We can achieve this by iterating through our list using for-loops</p>
+        </section>
+        <section>
+          <p>For-loops enable us to do some operations multiple times, there are 2 varieties:</p>
           <ul>
             <li>for each</li>
             <li>for with counter</li>
@@ -161,8 +201,9 @@ for (each item in a collection)
   do something
           </code></pre>
           <pre><code data-trim class="nohighlight">
-for (each day of the month)
-  display the day, weekday, and events on the day
+set destinations to ["Rome", "Tokyo", "New York"]
+for (each destination in destinations)
+  create a link to its destination landing page
         </code></pre>
         </section>
         <section>
@@ -172,7 +213,12 @@ for (each day of the month)
         </section>
         <section>
           <h2>for with counter</h2>
-          <p>Gives you a counter you can use for whatever you want. You can:</p>
+          <p>Sometimes you aren't iterating over a list, but you instead want to iterate over a range of numbers.</p>
+          <p>For example, I don't need a list if I want to count from 1 to 100, I don't want to store a list of these numbers just in case.</p>
+        </section>
+        <section>
+          <h2>for with counter</h2>
+          <p>for with counter gives you a counter you can use for whatever you want. You can:</p>
           <ul>
             <li>Start at any value</li>
             <li>End at any value</li>
@@ -194,24 +240,29 @@ for (counter from lowerBound to upperBound, step stepValue)
         <section>
           <h2>for with counter</h2>
           <pre><code data-trim class="nohighlight">
-set weekDays to [Monday,  Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-for (counter from 1 to 7)
-  print the counter, next to to it also print weekDays[counter]
+for (counter from 1 to 10)
+  print 2 * counter
           </code></pre>
-          <p>Here <code>weekDays[counter]</code> represents the weekday in the counter'th position</p>
+          <p>This would print out the 2 times table.</p>
         </section>
         <section>
           <h2>Whiteboard Exercise</h2>
           <p>Write pseudocode for the following:</p>
-          <blockquote>Happy Hotel has 38 rooms. The hotel manager wants a list of room numbers printed out to give to the cleaning staff.</blockquote>
-          <p>Extension:</p>
-          <blockquote>The hotel manager decides to cut down on costs. Print a list with every 2nd room number instead.</blockquote>
+          <blockquote>A hotel wants to run a special offer on their $150 room, but isn't sure what percent discount to apply. Calculate the amount of money saved for each value from 1 to 50 percent.</blockquote>
         </section>
       </section>
       <section>
         while loop
         <section>
-          <p>Do something a potentially infinite number of times</p>
+          <p>On rare occasions you will need to something an unknown number of times, for example:</p>
+          <ul>
+            <li>Waiting for an event to occur</li>
+            <li>Reading lines from a file</li>
+            <li>Interactive applications e.g. a calculator</li>
+          </ul>
+        </section>
+        <section>
+          <p>While loops let us do something a potentially infinite number of times</p>
           <p>The loop stops when the condition becomes true</p>
           <pre><code data-trim class="nohighlight">
 while (some condition is true)
@@ -227,7 +278,7 @@ while (counter is less than 10)
         <section>
           <h2>Whiteboard Exercise</h2>
           <p>Write pseudocode for the following:</p>
-          <blockquote>Hotels.com is running a giveaway competition and wants to give away as many prizes as possible with a $500,000 budget. Each prize costs $33.29. Keep giving away prizes until this budget has been used up.</blockquote>
+          <blockquote>Hotels.com is running a giveaway competition and wants to give away as many prizes as possible with a $500,000 budget. Each prize costs $33.29. Keep giving away prizes (taking away from the budget) until this budget has been used up.</blockquote>
         </section>
       </section>
       <section>
@@ -246,7 +297,7 @@ else
         <section>
           <p>Or to find someone’s name in an unsorted list, I’d say</p>
           <blockquote>Go through the list until I see the name I’m looking for</blockquote>
-          <p>This is a bit harder to translate, but essentially I’m saying</p>
+          <p>This is a bit harder to translate to pseudocode, but essentially I’m saying</p>
           <blockquote>I would check each item in the list, until I find the name or I’ve checked the entire list</blockquote>
         </section>
         <section>
@@ -283,27 +334,32 @@ else
         Exercises
         <section>
           <h2>Exercise 1</h2>
-          <p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
-          <p>Give your answer in pseudocode.</p>
-        </section>
-        <section>
-          <h2>Exercise 2</h2>
           <p>Write a program that decides whether I should wear a jacket, and whether I should also take an umbrella out today.</p>
           <p>Give your answer in pseudocode.</p>
         </section>
+
+        <section>
+          <h2>Exercise 2</h2>
+          <p>Print every number beween 1 and 100, then only print numbers that are a multiple of 5.</p>
+          <p>Give your answer in pseudocode.</p>
+        </section>
+
         <section>
           <h2>Exercise 3</h2>
-          <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
+          <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
           <p>Give your answer in pseudocode.</p>
         </section>
+
         <section>
           <h2>Exercise 4</h2>
-          <p>Print every number beween 1 and 100 that is a multiple of 5.</p>
+          <p>Add up the numbers from 1 to 10.</p>
           <p>Give your answer in pseudocode.</p>
+          <p><strong>Extension:</strong>Print the running total as you're adding up.</p>
         </section>
+
         <section>
           <h2>Exercise 5</h2>
-          <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
+          <p>Thinking back, how would you make a cup of tea?</p>
           <p>Give your answer in pseudocode.</p>
         </section>
       </section>
@@ -314,7 +370,75 @@ else
           <p>The more strict you are in using pseudocode, the closer your solution is to a functioning program.</p>
         </section>
         <section>
-          <h4>Exercise 1</h4>
+          <h2>Exercise 1</h2>
+          <p>Write a program that decides whether I should wear a jacket, and whether I should also take an umbrella out today.</p>
+          <pre><code data-trim class="nohighlight">
+set currentWeather to the current weather
+if (currentWeather is cold)
+  take jacket
+if (currentWeather is rainy)
+  take umbrella
+        </code></pre>
+        <p>Notice that we haven't said how to get the current weather. Pseudocode's job is to let us focus on our own logic, and worry about this later.</p>
+        <p>We also store the current weather in a variable, so we can refer back to it in a consistent way.</p>
+        </section>
+      
+        <section>
+          <h2>Exercise 2</h2>
+          <p>Print every number beween 1 and 100 that is a multiple of 5.</p>
+          <pre><code data-trim class="nohighlight">
+for (counter from 1 to 100, step 5)
+  print counter
+        </code></pre>
+        <p>Using a step of 5 means our counter goes up in increments of 5. We need no extra logic to print multiples of 5.</p>
+        </section>
+
+        <section>
+          <h2>Exercise 3</h2>
+          <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
+          <pre><code data-trim class="nohighlight">
+set redBox to empty
+set greenBox to empty
+set blueBox to empty
+for (each marble in mixedBox)
+  if (marble is red)
+    put marble in redBox
+  if (marble is green)
+    put marble in greenBox
+  if (marble is blue)
+    put marble in blueBox
+        </code></pre>
+        </section>
+
+        <section>
+          <h2>Exercise 4</h2>
+          <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
+          <pre><code data-trim class="nohighlight">
+set total to 0
+for (counter from 1 to 10)
+  total = total + counter
+
+print total
+        </code></pre>
+        <p>We start with a counter at zero. We then begin the loop which runs 10 times, the value of counter increasing by 1 each time.</p>
+        <p>So the first run, counter is 1 and total is set to 1, second run counter is 2 and total is set to 1 + 2, third run counter is 3 and total is set to 3 + 3, ...</p>
+        </section>
+        <section>
+          <h2>Exercise 4 - Extension</h2>
+          <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
+          <pre><code data-trim class="nohighlight">
+set total to 0
+for (counter from 1 to 10)
+  total = total + counter
+  print total
+
+print total
+        </code></pre>
+        <p>We now print the total each time we go through the loop body, which will print the in-progress subtotals.</p>
+        </section>
+
+        <section>
+          <h4>Exercise 5</h4>
           <p>Thinking back to our previous exercise, how would you make a cup of tea?</p>
           <pre><code data-trim class="nohighlight">
 get a cup and teabag
@@ -330,57 +454,7 @@ else
 if (recipient wants sugar)
   add sugar
 serve cup
-        </code></pre>
-        </section>
-        <section>
-          <h2>Exercise 2</h2>
-          <p>Write a program that decides whether I should wear a jacket, and whether I should also take an umbrella out today.</p>
-          <pre><code data-trim class="nohighlight">
-set currentWeather to the current weather
-if (currentWeather is cold)
-  take jacket
-if (currentWeather is rainy)
-  take umbrella
-        </code></pre>
-        <p>Notice that we haven't said how to get the current weather. Pseudocode's job is to let us focus on our own logic, and worry about this later.</p>
-        <p>We also store the current weather in a variable, so we can refer back to it in a consistent way.</p>
-        </section>
-        <section>
-          <h2>Exercise 3</h2>
-          <p>Add up the numbers from 1 to 10, printing a running total as you add up.</p>
-          <pre><code data-trim class="nohighlight">
-set total to 0
-for (counter from 1 to 10)
-  total = total + counter
-  print counter
-        </code></pre>
-        <p>We start with a counter at zero. We then begin the loop which runs 10 times, the value of counter increasing by 1 each time.</p>
-        <p>So the first run, counter is 1 and total is set to 1, second run counter is 2 and total is set to 1 + 2, third run counter is 3 and total is set to 3 + 3, ...</p>
-        </section>
-        <section>
-          <h2>Exercise 4</h2>
-          <p>Print every number beween 1 and 100 that is a multiple of 5.</p>
-          <pre><code data-trim class="nohighlight">
-for (counter from 1 to 100, step 5)
-  print counter
-        </code></pre>
-        <p>Using a step of 5 means our counter goes up in increments of 5. We need no extra logic to print multiples of 5.</p>
-        </section>
-        <section>
-          <h2>Exercise 5</h2>
-          <p>Given a box of red, green and blue marbles, sort them all into smaller boxes by colour.</p>
-          <pre><code data-trim class="nohighlight">
-set redBox to empty
-set greenBox to empty
-set blueBox to empty
-for (each marble in mixedBox)
-  if (marble is red)
-    put marble in redBox
-  if (marble is green)
-    put marble in greenBox
-  if (marble is blue)
-    put marble in blueBox
-        </code></pre>
+          </code></pre>
         </section>
       </section>
     </div>
