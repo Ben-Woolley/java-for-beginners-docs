@@ -35,7 +35,7 @@ Our IDE of choice for this course is Visual Studio Code - a lightweight editor t
 
 ### Required Extensions
 VSCode is not natively a Java IDE, so we need to install some extensions to make writing, building, and running Java code simple.  
-Installation guides for the plugins are on their respective pages:
+You can install the plugins by following the links and clicking the Install button. Or you can search by their names in the Extensions ![Extensions icon](/images/setup/extensions_icon.png) sidebar.
 
 * [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 * [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
@@ -66,8 +66,6 @@ To download the source code:
 To open the code in VSCode go to `File > Open Folder`, select the folder `java-for-beginners-master` and click OK.
 
 ## Verify your Installation
-<!-- TODO advice on how to open each view -->
-<!-- TODO clarification on how to get to Main.java -->
 To confirm you can run Java programs:
 * Go to the Explorer menu by clicking the Explorer icon ![Explorer icon](/images/setup/explorer_icon.png)
 * Navigate to `Main.java` by clicking on it in the explorer window.  
