@@ -48,31 +48,34 @@ In order, these plugins add the following functionality:
 * The ability to **run** built Java programs
 * **Intelligent autocomplete** when writing Java
 
-#### Configuring Language Support for Java
-You may have to configure the Language Support extension to use your installed JDK.  
+#### (Optional) Configuring Language Support for Java
+**If the Java extension reports an error** you may have to configure the Language Support extension to use your installed JDK.  
 To do this, in VSCode:
 * Go to `File > Preferences > Settings`
-* In the search bar on the settings page, search for **"java.home"**
-* Click `Edit in settings.json`
-* Paste the path/location of your java installation inbetween the quotation marks for `java.home`, and save. The entry should look like the below, substituting for your JDK install location:
-```
-"java.home": "/Library/Java/JavaVirtualMachines/AdoptOpenJDK-<version>.jdk"
-```
+* In the search bar on the settings page, search for **"java.home"**, then click `Edit in settings.json`
+![Java home option](/images/setup/java_home_set.png)
+* Paste the path/location of your java installation inbetween the quotation marks for `java.home`, and save. The entry should look like the below, substituting for your JDK install location:  
+![Java home json](/images/setup/java_home_json.png)
 
 ## Download the Course Code
-We will use VSCode to download the code for the project.
-
-Under the hood this is using a tool called **git** - which developers use to control changes to the code.
-
 To download the source code:
-* Go to `View > SCM` or press `Ctrl+Shift+G`
-* Click "Clone Repository"
-* In the Repository URL box, paste `https://github.com/Ben-Woolley/java-for-beginners.git`
-* Select where you want to download the code to, e.g. a new folder `projects` in my Documents.
+* Download the course code zip file from [here](https://github.com/Ben-Woolley/java-for-beginners/archive/master.zip)
+* Select where you want to keep your code to, e.g. a new folder `projects` in my Documents.
+* Unpack the zip file to your projects folder
 
-To open the code in VSCode go to `File > Open Folder`, select the folder `java-for-beginners` and click OK.
+To open the code in VSCode go to `File > Open Folder`, select the folder `java-for-beginners-master` and click OK.
 
 ## Verify your Installation
-To confirm you can run Java programs, open `Main.java` by clicking on it in the explorer window. Click the `run` button below line 4 in the file.
+<!-- TODO advice on how to open each view -->
+<!-- TODO clarification on how to get to Main.java -->
+To confirm you can run Java programs:
+* Go to the Explorer menu by clicking the Explorer icon ![Explorer icon](/images/setup/explorer_icon.png)
+* Navigate to `Main.java` by clicking on it in the explorer window.  
+![Explorer window with Main.java open](/images/setup/explorer_main.png)
+* Run `Main.java` by either:
+   * Clicking on the Run icon ![Run icon])(/images/setup/run_icon.png), and clicking the `Run and debug` button.
+   * Clicking the `run` button above line five in `Main.java`
+
+![Explorer window with run buttons highlighted](/images/setup/run_java.png)
 
 If the program runs (i.e. a box opens that says `Congratulations, you can build and run Java files!`) then you are ready to go.
