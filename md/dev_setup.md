@@ -71,7 +71,7 @@ To confirm you can run Java programs:
 * Navigate to `Main.java` by clicking on it in the explorer window.  
 ![Explorer window with Main.java open](/images/setup/explorer_main.png)
 * Run `Main.java` by either:
-   * Clicking on the Run icon ![Run icon])(/images/setup/run_icon.png), and clicking the `Run and debug` button.
+   * Clicking on the Run icon ![Run icon](/images/setup/run_icon.png), and clicking the `Run and debug` button.
    * Clicking the `run` button above line five in `Main.java`
 
 ![Explorer window with run buttons highlighted](/images/setup/run_java.png)
