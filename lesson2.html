@@ -131,12 +131,16 @@ public static void main(String[] args) {
       <section>
         Variables
         <section>
-          <p>As we've seen before, variables are for storing values we can refer to and update in our program.</p>
-          <p>We've been putting whatever we want into our pseudocode variables, Java is more picky.</p>
-          <p>Java is <strong>strictly typed</strong> - meaning you must provide the <strong>type</strong> of the variable and stick to it</p>
+          <p>As we've seen before, variables are for storing values we can refer to and update later in our program.</p>
+          <p>Java is <strong>strictly typed</strong> - meaning the <strong>type</strong> of value stored <strong>cannot</strong> change.</p>
+          <p>We can either define our variable by first declaring the type, or with <code>var</code>, <strong>we will prefer <code>var</code> for the course</strong>.</p>
           <p>This is the general pattern:</p>
           <pre><code data-trim data-line-numbers class="java">
-ObjectType nameOfObject = value;
+ObjectType myVariable = value;
+          </code></pre>
+          <p>or</p>
+          <pre><code data-trim data-line-numbers class="java">
+var myVariable = value;
           </code></pre>
         </section>
         <section>
@@ -144,9 +148,9 @@ ObjectType nameOfObject = value;
           <pre><code data-trim data-line-numbers class="java">
 public class VariablesAndTypes {
   public static void main(String[] args) {
-    String greeting = "Hello";
-    Integer myFavouriteNumber = 17;
-    Boolean isThisJava = true;
+    var greeting = "Hello";
+    var myFavouriteNumber = 17;
+    var isThisJava = true;
   }
 }
           </code></pre>
@@ -171,9 +175,9 @@ public class VariablesAndTypes {
           <pre><code data-trim data-line-numbers class="java">
 public class UsingStrings {
   public static void main(String[] args) {
-    String teacherName = "Ben";
-    String courseName = "Java for beginners";
-    String statement = teacherName + " teaches " + courseName;
+    var teacherName = "Ben";
+    var courseName = "Java for beginners";
+    var statement = teacherName + " teaches " + courseName;
     System.out.println(statement);
   }
 }
@@ -188,23 +192,24 @@ public class UsingStrings {
       <section>
         Numbers
         <section>
-          <p>Java needs you to choose between a number that:</p>
+          <p>Java lets you to choose between a number that:</p>
           <ul>
             <li>Only does whole numbers (type Integer or Long)</li>
             <li>Has a decimal place (type Float or Double)</li>
             <li>Handles even larger numbers (at the cost of memory)</li>
           </ul>
+          <p>By default Java uses <code>Integer</code> and <code>Double</code>, which will happen when you use <code>var</code> to define variables.</p>
           <pre><code data-trim data-line-numbers class="java">
 public class UsingNumbers {
   public static void main(String[] args) {
     Integer i1 = 123;
-    Long l1 = 123l;
-    Float f1 = 123.45f;
+    Long l1 = 123l; // Notice the "l" after the Long
+    Float f1 = 123.45f; // Notice the "f" after the Float
     Double d1 = 123.45;
   }
 }
           </code></pre>
-          <small>You can find out more about these types <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a></small>
+          <small>(Variable types declared for emphasis only, var also works)</small>
         </section>
         <section>
           <h3>Whiteboard Exercise</h3>
@@ -224,7 +229,7 @@ public class UsingNumbers {
           <pre><code data-trim data-line-numbers class="java">
 public class UsingBooleans {
   public static void main(String[] args) {
-    Boolean enabled = true;
+    var enabled = true;
   }
 }
           </code></pre>
@@ -242,12 +247,12 @@ public class UsingBooleans {
           <pre><code data-trim data-line-numbers class="java">
 public class MathOperators {
   public static void main(String[] args) {
-   Integer plus = 1 + 2;
-    Integer minus = 1 - 2;
-    Integer divide = 1 / 2;
-    Integer multiply = 1 * 2;
-    Double power = Math.pow(1, 2); // 1 to the power of 2
-    Integer modulus = 1 % 2; // remainder of 1 divided by 2
+    var plus = 1 + 2;
+    var minus = 1 - 2;
+    var divide = 1 / 2;
+    var multiply = 1 * 2;
+    var power = Math.pow(1, 2); // 1 to the power of 2
+    var modulus = 1 % 2; // remainder of 1 divided by 2
   }
 }
           </code></pre>
@@ -260,11 +265,11 @@ public class MathOperators {
           <pre><code data-trim data-line-numbers class="java">
 public class MathComparisons {
   public static void main(String[] args) {
-    Boolean lessThan = 1 < 2;
-    Boolean greaterThan = 1 > 2;
-    Boolean lessThanOrEqual = 1 <= 2;
-    Boolean greaterThanOrEqual = 1 >= 2;
-    Boolean equal = 1 == 2; // note it is two equals signs
+    var lessThan = 1 < 2;
+    var greaterThan = 1 > 2;
+    var lessThanOrEqual = 1 <= 2;
+    var greaterThanOrEqual = 1 >= 2;
+    var equal = 1 == 2; // note it is two equals signs
   }
 }
           </code></pre>
@@ -278,9 +283,9 @@ public class MathComparisons {
           <pre><code data-trim data-line-numbers class="java">
 public class BooleanOperators {
   public static void main(String[] args) {
-    Boolean inclusiveOr = true || false;
-    Boolean and = true && false;
-    Boolean not = !true;
+    var inclusiveOr = true || false;
+    var and = true && false;
+    var not = !true;
   }
 }
           </code></pre>
@@ -355,7 +360,7 @@ public class BooleanOperators {
           <pre><code data-trim data-line-numbers class="java">
 public class IfStatements {
   public static void main(String[] args) {
-    Boolean condition = true;
+    var condition = true;
 
     if (condition) {
       System.out.println("The condition is true");
@@ -376,7 +381,7 @@ public class IfStatements {
           <pre><code data-trim data-line-numbers class="java">
 public class IfStatementsContinued {
   public static void main(String[] args) {
-    Integer numberToCheck = 5;
+    var numberToCheck = 5;
 
     if (numberToCheck < 0) {
       System.out.println("The number is too small");

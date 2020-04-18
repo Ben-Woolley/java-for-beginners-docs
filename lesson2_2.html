@@ -68,9 +68,13 @@
         Collections
         <section>
           <p>A Collection is a data type that holds a bunch of another data type</p>
-          <p>These are usually defined as:</p>
+          <p>Their type can be defined as:</p>
           <pre><code data-trim data-line-numbers class="java">
-CollectionType&lt;TypeItContains&gt; collectionOfSomething;
+CollectionType&lt;TypeItContains&gt; collectionOfSomething = ???;
+          </code></pre>
+          <p>we will continue to use:</p>
+          <pre><code data-trim data-line-numbers class="java">
+var collectionOfSomething = ???;
           </code></pre>
         </section>
         <section>
@@ -78,17 +82,16 @@ CollectionType&lt;TypeItContains&gt; collectionOfSomething;
           <pre><code data-trim data-line-numbers class="java">
 import java.util.List;
 import java.util.Set;
-import java.util.Queue;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.ArrayDeque;
+import java.util.Map;
 
 public class UsingCollections {
   public static void main(String[] args) {
-    List&lt;String&gt; listOfStrings = new ArrayList&lt;&gt;();
-    Set&lt;Integer&gt; setOfIntegers = new HashSet&lt;&gt;();
-    Queue&lt;Boolean&gt; queueOfBooleans = new ArrayDeque&lt;&gt;();
+    var listOfStrings = List.of("first element", "second element");
+    var setOfIntegers = Set.of(1, 2, 3);
+    var mapFromStringToBoolean = Map.of(
+        "this is true", true,
+        "this is false", false
+    );
   }
 }
           </code></pre>
@@ -102,12 +105,11 @@ public class UsingCollections {
           <p>Much like pseudocode says "for each item in the list", we can do this:</p>
           <pre><code data-trim data-line-numbers class="java">
 import java.util.List;
-import java.util.Arrays;
 
 public class UsingForEach {
   public static void main(String[] args) {
-    List&lt;String&gt; alphabet = Arrays.asList("a", "b", "c");
-    for (String letter : alphabet) {
+    var alphabet = List.of("a", "b", "c");
+    for (var letter : alphabet) {
       System.out.println(letter);
     }
   }
@@ -121,7 +123,7 @@ public class UsingForEach {
           <pre><code data-trim data-line-numbers class="java">
 public class UsingForWithCounter {
   public static void main(String[] args) {
-    for (Integer counter = 1; counter <= 10; counter = counter + 1) {
+    for (var counter = 1; counter <= 10; counter = counter + 1) {
       System.out.println("Number " + counter);
     }
   }
@@ -131,12 +133,12 @@ public class UsingForWithCounter {
         <section>
           <p>The "for a counter from lower bound to upper bound" code is made of 3 parts</p>
           <pre><code data-trim data-line-numbers class="java">
-for (Integer counter = 1; counter <= 10; counter = counter + 1) {
+for (var counter = 1; counter <= 10; counter = counter + 1) {
   System.out.println("Number " + counter);
 }
           </code></pre>
           <ol>
-            <li><strong>Integer counter = 1;</strong> - Create an Integer variable called counter, set it to 1</li>
+            <li><strong>var counter = 1;</strong> - Create an Integer variable called counter, set it to 1</li>
             <li><strong>counter <= 10;</strong> - Continue looping until <strong>counter</strong> is greater than 10</li>
             <li><strong>counter = counter + 1</strong> - After each run of the loop, set the counter to its value plus 1</li>
           </ol>
@@ -147,7 +149,7 @@ for (Integer counter = 1; counter <= 10; counter = counter + 1) {
         <section>
           <p>This is very similar to our pseudocode:</p>
           <pre><code data-trim data-line-numbers class="java">
-Boolean condition = true;
+var condition = true;
 while (condition) {
   System.out.println("I'm stuck here forever");
 }
@@ -168,10 +170,10 @@ while (condition) {
           <p>{Braces} group statements in a dedicated block with its own context.</p>
           <p>Variables declared inside a set of braces cannot be used after that set has ended, e.g.</p>
           <pre><code data-trim data-line-numbers class="java">
-Boolean sayHello = true;
+var sayHello = true;
 if (sayHello) {
   // sayHello is accessible here, because this block is more nested
-  String helloMessage = "Hello there!";
+  var helloMessage = "Hello there!";
   System.out.println(helloMessage);
 }
 // helloMessage is inaccessible here, because the block ended
@@ -180,10 +182,10 @@ if (sayHello) {
         <section>
           <p>[Brackets] let you define and access <strong>arrays</strong> - fixed-size lists that are very efficient.</p>
             <pre><code data-trim data-line-numbers class="java">
-Integer[] numbers = new Integer[]{1, 2, 3};
-Integer firstNumber = numbers[0];
-Integer secondNumber = numbers[1];
-Integer thirdNumber = numbers[2];
+var numbers = new Integer[]{1, 2, 3};
+var firstNumber = numbers[0];
+var secondNumber = numbers[1];
+var thirdNumber = numbers[2];
             </code></pre>
         </section>
         <section>
@@ -193,7 +195,7 @@ Integer thirdNumber = numbers[2];
             <li>Define and provide required <strong>arguments</strong> for <strong>functions</strong> - code written elsewhere which you can <strong>call</strong> to get a value.</li>
           </ul>
           <pre><code data-trim data-line-numbers class="java">
-String day = "Wednesday";
+var day = "Wednesday";
 if (day.toLowerCase().equals("wednesday")) {
   System.out.println("It is indeed Wednesday");
 }
