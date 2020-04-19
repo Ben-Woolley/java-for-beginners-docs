@@ -401,6 +401,75 @@ public class IfStatementsContinued {
         </section>
       </section>
       <section>
+        <h2>Code Structure</h2>
+
+      </section>
+      <section>
+        Code Structure
+        <section>
+          <p>The lines of code you write need to know what <strong>context</strong> they are being run in.</p>
+        </section>
+        <section>
+          <p>{Braces} group statements in a dedicated block with its own context.</p>
+          <p>Variables declared inside a set of braces cannot be used after that set has ended, e.g.</p>
+          <pre><code data-trim data-line-numbers class="java">
+var sayHello = true;
+if (sayHello) {
+  // sayHello is accessible here, because this block is deeper
+  var helloMessage = "Hello there!";
+  System.out.println(helloMessage);
+}
+// helloMessage is inaccessible here, because we are in a shallower context
+          </code></pre>
+        </section>
+        <section>
+          <p>[Brackets] let you define and access <strong>arrays</strong> - fixed-size lists that are very efficient.</p>
+            <pre><code data-trim data-line-numbers class="java">
+var numbers = new Integer[]{1, 2, 3};
+var firstNumber = numbers[0];
+var secondNumber = numbers[1];
+var thirdNumber = numbers[2];
+            </code></pre>
+        </section>
+        <section>
+          <p>(Parentheses):</p>
+          <ul>
+            <li>Override BODMAS in mathmatical calculations.</li>
+            <li>Define and provide required <strong>arguments</strong> for <strong>functions</strong> - code written elsewhere which you can <strong>call</strong> to get a value.</li>
+          </ul>
+          <pre><code data-trim data-line-numbers class="java">
+var day = "Wednesday";
+if (day.toLowerCase().equals("wednesday")) {
+  System.out.println("It is indeed Wednesday");
+}
+          </code></pre>
+          <p>In this example, <code>toLowerCase</code> takes no arguments.</p>
+          <p><code>equals</code> takes one, a string to compare the <code>day</code>.</p>
+          <p><code>System.out.println</code> takes one, a string to print to the console</p>
+        </section>
+      </section>
+      <section>
+        Coding Conventions
+        <section>
+          <p>To make reading other peoples' code easier, programming languages have agreed coding conventions.</p>
+        </section>
+        <section>
+          <p>Naming conventions differ for certain cases:</p>
+          <ul>
+            <li>Variables, function names, and function arguments, are written in <strong>lowerCamelCase</strong>.</li>
+            <li>Classes are <strong>UpperCamelCase</strong></li>
+            <li>Constant values are <strong>UPPER_SNAKE_CASE</strong></li>
+          </ul>
+        </section>
+        <section>
+          <p>Some other essential rules for Java:</p>
+          <ul>
+            <li>The name of a class must match the name of the file it's in. i.e. <code>public class Calculator { ... }</code> must exist in <code>Calculator.java</code>.</li>
+            <li>You cannot name variables after <strong>reserved words</strong> i.e. words used in the core Java language features.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
         <h2>Exercises</h2>
         <h4>Variables and Basic Operators</h4>
         <p><a href="md/exercise-list">click here for the exercise sheet</a></p>
