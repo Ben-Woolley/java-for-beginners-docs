@@ -33,6 +33,8 @@ Our IDE of choice for this course is Visual Studio Code - a lightweight editor t
 
 **Download and install VSCode from https://code.visualstudio.com**
 
+You will be shown a Welcome page on startup, **You should click "Interface Overview" in the "Learn" section** to get an overview of the basic controls and their names.
+
 ### Required Extensions
 VSCode is not natively a Java IDE, so we need to install some extensions to make writing, building, and running Java code simple.  
 You can install the plugins by following the links and clicking the Install button. Or you can search by their names in the Extensions ![Extensions icon](/images/setup/extensions_icon.png) sidebar.
