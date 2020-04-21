@@ -149,8 +149,13 @@ var myVariable = value;
 public class VariablesAndTypes {
   public static void main(String[] args) {
     var greeting = "Hello";
+    System.out.println(greeting);
+
     var myFavouriteNumber = 17;
+    System.out.println(myFavouriteNumber);
+
     var isThisJava = true;
+    System.out.println(isThisJava);
   }
 }
           </code></pre>
@@ -178,6 +183,7 @@ public class UsingStrings {
     var teacherName = "Ben";
     var courseName = "Java for beginners";
     var statement = teacherName + " teaches " + courseName;
+
     System.out.println(statement);
   }
 }
@@ -186,7 +192,8 @@ public class UsingStrings {
         </section>
         <section>
           <h3>Whiteboard Exercise</h3>
-          <p>Define a String variable <strong>myName</strong> that has your own name as a value.</p>
+          <p>Create a new file <code>Greeting.java</code>, write a class and a main method in it.</p>
+          <p>In the main method, define a String variable <strong>myName</strong> that has your own name as a value.</p>
         </section>
       </section>
       <section>
@@ -199,13 +206,24 @@ public class UsingStrings {
             <li>Handles even larger numbers (at the cost of memory)</li>
           </ul>
           <p>By default Java uses <code>Integer</code> and <code>Double</code>, which will happen when you use <code>var</code> to define variables.</p>
+        </section>
+        <section>
           <pre><code data-trim data-line-numbers class="java">
 public class UsingNumbers {
   public static void main(String[] args) {
+    // These can all be defined using var too
+
     Integer i1 = 123;
+    System.out.println(i1);
+
     Long l1 = 123l; // Notice the "l" after the Long
+    System.out.println(l1);
+
     Float f1 = 123.45f; // Notice the "f" after the Float
+    System.out.println(f1);
+
     Double d1 = 123.45;
+    System.out.println(d1);
   }
 }
           </code></pre>
@@ -213,7 +231,8 @@ public class UsingNumbers {
         </section>
         <section>
           <h3>Whiteboard Exercise</h3>
-          <p>Define an Integer variable <strong>myAge</strong> that has your own age as a value.</p>
+          <p>In <code>Greeting.java</code>, define an Integer variable <strong>myAge</strong> that has your own age as a value.</p>
+          <p>Print a message using your name and age variables, e.g. "I'm Ben and I'm definitely 24"</p>
         </section>
       </section>
       <section>
@@ -230,13 +249,14 @@ public class UsingNumbers {
 public class UsingBooleans {
   public static void main(String[] args) {
     var enabled = true;
+    System.out.println(enabled);
   }
 }
           </code></pre>
         </section>
         <section>
           <h3>Whiteboard Exercise</h3>
-          <p>Define a Boolean variable <strong>isHungry</strong> with the value true or false depending on whether or not you are hungry.</p>
+          <p>In <code>Greeting.java</code>, define a Boolean variable <strong>isHungry</strong> with the value true or false depending on whether or not you are hungry.</p>
         </section>
       </section>
       <section>
@@ -252,11 +272,11 @@ public class MathOperators {
     var divide = 1 / 2;
     var multiply = 1 * 2;
     var power = Math.pow(1, 2); // 1 to the power of 2
+    // Modulus %  gives you the remainder of division
     var modulus = 1 % 2; // remainder of 1 divided by 2
   }
 }
           </code></pre>
-          <p>Note modulus (%) - which is the remainder of integer division, and is more useful than you think it is.</p>
           <p>These operators follow BODMAS, you can use brackets as normal to control the order.</p>
         </section>
         <section>
@@ -269,7 +289,7 @@ public class MathComparisons {
     var greaterThan = 1 > 2;
     var lessThanOrEqual = 1 <= 2;
     var greaterThanOrEqual = 1 >= 2;
-    var equal = 1 == 2; // note it is two equals signs
+    var equal = 1 == 2; // note it is double equals signs
   }
 }
           </code></pre>
@@ -367,7 +387,7 @@ public class IfStatements {
     }
 
     if (condition) {
-      System.out.println("The condition is true");
+      System.out.println("The condition is still true");
     } else {
       System.out.println("The condition is false");
     }
@@ -396,7 +416,7 @@ public class IfStatementsContinued {
         </section>
         <section>
           <h3>Whiteboard Exercise</h3>
-          <p>Define a variable <strong>isHungry</strong> as before. Then write an if statement to print <strong>"Food time!"</strong> if true and <strong>"I'll wait"</strong> if
+          <p>Using <strong>isHungry</strong> in <code>Greeting.java</code>. Write an if statement to print <strong>"Food time!"</strong> if true and <strong>"No snacking!"</strong> if
             false.</p>
         </section>
       </section>
@@ -413,22 +433,41 @@ public class IfStatementsContinued {
           <p>{Braces} group statements in a dedicated block with its own context.</p>
           <p>Variables declared inside a set of braces cannot be used after that set has ended, e.g.</p>
           <pre><code data-trim data-line-numbers class="java">
-var sayHello = true;
-if (sayHello) {
-  // sayHello is accessible here, because this block is deeper
-  var helloMessage = "Hello there!";
-  System.out.println(helloMessage);
+public class Braces {
+  public static void main(String[] args) {
+    var sayHello = true;
+
+    if (sayHello) { 
+      // sayHello is accessible here, because this block is inside main
+
+      var helloMessage = "Hello there!";
+      System.out.println(helloMessage);
+
+    } 
+    // helloMessage is inaccessible here, we're not in the if statement's context
+  }
 }
-// helloMessage is inaccessible here, because we are in a shallower context
           </code></pre>
         </section>
         <section>
           <p>[Brackets] let you define and access <strong>arrays</strong> - fixed-size lists that are very efficient.</p>
             <pre><code data-trim data-line-numbers class="java">
-var numbers = new Integer[]{1, 2, 3};
-var firstNumber = numbers[0];
-var secondNumber = numbers[1];
-var thirdNumber = numbers[2];
+public class Brackets {
+  public static void main(String[] args) {
+
+    // Create an array containing 1, 2, and 3
+    var numbers = new Integer[] { 1, 2, 3 };
+
+    var firstNumber = numbers[0];
+    System.out.println(firstNumber);
+
+    var secondNumber = numbers[1];
+    System.out.println(secondNumber);
+
+    var thirdNumber = numbers[2];
+    System.out.println(thirdNumber);
+  }
+}
             </code></pre>
         </section>
         <section>
@@ -438,9 +477,13 @@ var thirdNumber = numbers[2];
             <li>Define and provide required <strong>arguments</strong> for <strong>functions</strong> - code written elsewhere which you can <strong>call</strong> to get a value.</li>
           </ul>
           <pre><code data-trim data-line-numbers class="java">
-var day = "Wednesday";
-if (day.toLowerCase().equals("wednesday")) {
-  System.out.println("It is indeed Wednesday");
+public class Parentheses {
+  public static void main(String[] args) {
+    var day = "Wednesday";
+    if (day.toLowerCase().equals("wednesday")) {
+      System.out.println("It is Wednesday my dudes");
+    }
+  }
 }
           </code></pre>
           <p>In this example, <code>toLowerCase</code> takes no arguments.</p>
