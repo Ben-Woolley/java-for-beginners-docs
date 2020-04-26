@@ -3,7 +3,7 @@ This is a high-level overview of the course, including links to the slides and r
 
 **It is highly recommended that you go through the slides before the session.**
 
-The reading list is optional but recommended. They include alternative explanations for concepts, and additional examples.
+The reading list is **optional but recommended**. They include alternative explanations for concepts, and additional examples.
 
 ## Useful Resources
 These resources are particularly good and will be recommended throughout the course.
@@ -14,12 +14,15 @@ These resources are particularly good and will be recommended throughout the cou
 Before you attend the first session, you should be ready to write, build, and run Java code.
 
 We will be learning the base tools every programming language has using **psuedocode** - a half-way between natural language and programming languages.  
-The slides covered in the session are [here](../lesson1.html).
+
+**This lesson will be delivered in lecture format, covering "Describing how to solve problems"**
 
 **Actions:**
 * Follow the [Developer Setup Guide](dev_setup.md)
 
-**Slides:** [Java 101 introduction](../lesson0.html)
+**Slides:** 
+* [Java 101 introduction](../lesson0.html)
+* [Describing how to solve problems](../lesson1.html)
 
 **Reading List:**
 * [hackr.io blog - What is Programming?](https://hackr.io/blog/what-is-programming) (You don't need to do the "Writing your first program" section)
