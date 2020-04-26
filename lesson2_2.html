@@ -70,11 +70,11 @@
           <p>A Collection is a data type that holds a bunch of another data type</p>
           <p>Their type can be defined as:</p>
           <pre><code data-trim data-line-numbers class="java">
-CollectionType&lt;TypeItContains&gt; collectionOfSomething = ???;
+CollectionType&lt;TypeItContains&gt; collectionOfSomething = ...
           </code></pre>
           <p>we will continue to use:</p>
           <pre><code data-trim data-line-numbers class="java">
-var collectionOfSomething = ???;
+var collectionOfSomething = ...
           </code></pre>
         </section>
         <section>
@@ -149,9 +149,13 @@ for (var counter = 1; counter <= 10; counter = counter + 1) {
         <section>
           <p>This is very similar to our pseudocode:</p>
           <pre><code data-trim data-line-numbers class="java">
-var condition = true;
-while (condition) {
-  System.out.println("I'm stuck here forever");
+public class UsingWhile {
+  public static void main(String[] args) {
+    var condition = true;
+    while (condition) {
+      System.out.println("I'm stuck here forever");
+    }
+  }
 }
           </code></pre>
           <p>This particular while-loop will run forever, because it contains no logic to set <strong>condition</strong> to false.</p>
