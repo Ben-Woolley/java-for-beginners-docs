@@ -31,13 +31,13 @@ To effectively write Java programs, most developers use an IDE (Integrated Devel
 
 Our IDE of choice for this course is Visual Studio Code - a lightweight editor that can be greatly extended with plugins.
 
-**Download and install VSCode from https://code.visualstudio.com**
+**Download and install VSCode from [https://code.visualstudio.com](https://code.visualstudio.com)**
 
 You will be shown a Welcome page on startup, **You should click "Interface Overview" in the "Learn" section** to get an overview of the basic controls and their names.
 
 ### Required Extensions
 VSCode is not natively a Java IDE, so we need to install some extensions to make writing, building, and running Java code simple.  
-You can install the plugins by following the links and clicking the Install button. Or you can search by their names in the Extensions ![Extensions icon](/images/setup/extensions_icon.png) sidebar.
+You can install the plugins by following the links and clicking the Install button. Or you can search by their names in the Extensions ![Extensions icon](../images/setup/extensions_icon.png) sidebar.
 
 * [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 * [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
@@ -55,9 +55,9 @@ In order, these plugins add the following functionality:
 To do this, in VSCode:
 * Go to `File > Preferences > Settings`
 * In the search bar on the settings page, search for **"java.home"**, then click `Edit in settings.json`
-![Java home option](/images/setup/java_home_set.png)
+![Java home option](../images/setup/java_home_set.png)
 * Paste the path/location of your java installation inbetween the quotation marks for `java.home`, and save. The entry should look like the below, substituting for your JDK install location:  
-![Java home json](/images/setup/java_home_json.png)
+![Java home json](../images/setup/java_home_json.png)
 
 ## Download the Course Code
 To download the source code:
@@ -69,13 +69,13 @@ To open the code in VSCode go to `File > Open Folder`, select the folder `java-f
 
 ## Verify your Installation
 To confirm you can run Java programs:
-* Go to the Explorer menu by clicking the Explorer icon ![Explorer icon](/images/setup/explorer_icon.png)
+* Go to the Explorer menu by clicking the Explorer icon ![Explorer icon](../images/setup/explorer_icon.png)
 * Navigate to `Main.java` by clicking on it in the explorer window.  
-![Explorer window with Main.java open](/images/setup/explorer_main.png)
+![Explorer window with Main.java open](../images/setup/explorer_main.png)
 * Run `Main.java` by either:
-   * Clicking on the Run icon ![Run icon](/images/setup/run_icon.png), and clicking the `Run and debug` button.
+   * Clicking on the Run icon ![Run icon](../images/setup/run_icon.png), and clicking the `Run and debug` button.
    * Clicking the `run` button above line five in `Main.java`
 
-![Explorer window with run buttons highlighted](/images/setup/run_java.png)
+![Explorer window with run buttons highlighted](../images/setup/run_java.png)
 
 If the program runs (i.e. a box opens that says `Congratulations, you can build and run Java files!`) then you are ready to go.
