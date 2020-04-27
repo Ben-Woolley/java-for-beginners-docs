@@ -42,10 +42,28 @@ Write your own "Hello, world!" program, then extend it to take a name as input f
 
 You should use `UserInputUtil` in the `eca.util` package, you will have to `import` it.
 
-### \[OOEV] Odd Or Even
-Write a Java program to accept a number and check the number is odd. You may print the result however you like.
+### \[VOWL] Is this character a vowel?
+Write a program that determines whether a character is a vowel or not and prints the result to the console.
 
-e.g for a number a = 10 you could print `10 is even`
+Your solution only needs to be correct for lower case letters. You can make use of the `.toUpperCase()` or `.toLowerCase()` methods on Strings if you want to make your program work for both. e.g. `"Test".toLowerCase()` converts "Test", to "test".
+
+e.g. inputting "a" would result in
+```
+'a' is a vowel
+```
+
+inputting "b" would instead result in
+```
+'b' is a consonant
+```
+
+### \[LOTN] Biggest of three numbers
+Write a program that determines which of 3 numbers is the largest and prints the result. You can represent these numbers as 3 variables in your solution.
+
+e.g. for the numbers [5, 2, 6], the output should be:
+```
+The largest number of 5, 2, 6 is 6
+```
 
 ### \[SETE] Sum is equal to Expected
 Write a Java program to calculate the sum of two integers and determine if their sum is equal to a third integer.
@@ -56,15 +74,40 @@ e.g for:
 * `c` = 15
 The result would be `true`
 
+### \[BILL] How much do I owe you?
+Write a program to calculate the total cost of a restaurant meal. It should include:
+* VAT
+* Your Tip
+* The amount owed per person
+
+Print out a breakdown (i.e. pre-tax, VAT amount, and tip), the total owed, and the amount owed per person.
+
+e.g. for a 2 person meal came to a £30 bill, with 20% VAT, plus a £5 tip would result in:
+```
+Subtotal: 30
+VAT: 6
+Tip: 5
+Total: 41
+Cost per person: 20.5
+```
+
+**Extension**
+You don't always want to tip, add functionality to either include or not include a tip. (Similar to a card machine's "Would you like to add gratuity")
+
+### \[OOEV] Odd Or Even
+Write a Java program to accept a number and check the number is odd. You may print the result however you like.
+
+e.g for a number a = 10 you could print `10 is even`
+
 ### \[GWNT] Guess What Number I'm Thinking
 Write a program that thinks of a random number between 1 and 10.
 Let the user enter a number, if it is correct print "You win!" otherwise print "You lose!".
 
 You will need some way to get a random number within a range: 
 ```java
-Integer aRandomNumberFrom1To5 = new Random().nextInt(4) + 1;
+var aRandomNumberFrom1To5 = new Random().nextInt(4) + 1;
 ```
-`Random.nextInt` generates a random Integer between 0 and the passed-in number. Adding `+1` bumps this up to a random number between 1 and 5.
+`Random.nextInt` generates a random Integer between 0 and the passed-in number. Adding `+ 1` bumps this up to a random number between 1 and 5.
 
 You should also use `UserInputUtil` in the `eca.util` package, you may have to `import` it.
 
@@ -109,6 +152,28 @@ Write a program that prints out the `n` times table in a pretty format e.g
 2 X 2 = 4
 ...
 ```
+
+### \[RPSG] Rock, Paper, Scissors
+Write rock, paper scissors.
+* Your can choose how to represent your input (e.g. entering "rock", "paper", "scissors", or 1, 2, 3)
+* Your opponent is the program, which will choose an option at random
+* Your solution must complete once either you or the program has won, **a draw must result in a rematch**.
+
+**Extension**
+The winner of your game is now based off the best-of-three.
+
+### \[HOLG] Higher or lower game
+There are several variants of this game, using playing cards, dice, etc.  
+The game is played as follows:
+1. The dealer rolls a dice and shows the number to the player
+2. The player will guess whether the next dice roll will be higher or lower than the first roll
+3. If the player guessed correctly:
+   * The player earns a point
+   * The second roll becomes the new "first number" and the game repeats from step 2
+4. If the player guessed incorrectly, then the game is over
+
+Implement the game according to the above rules.  
+Make sure you print useful information for the user throughout.
 
 ### \[SELI] Searching Lists
 Given a list of integers, find and print the largest, find and print the smallest, find and print a specified value (or null if it doesnt exist).
