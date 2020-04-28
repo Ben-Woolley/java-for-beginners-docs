@@ -202,10 +202,39 @@ ___Hint___: You will need to make use of `.toString()`, and `.split()` on a `Str
 
 # Exercise List Topic 3
 
+## \[ANML] Animals
+Create an `Animal` class. The class needs the following properties:
+* A `species`
+* A `numberOfLegs`
+* A `noise` the animal makes
+
+The class should also have the following methods:
+* `call` - prints the animal's `noise` followed by an exclaimation mark (!)
+* `facts` - prints information about the animal using its `species`, `number of legs`, and `noise`. e.g. `The Dog has 4 legs and makes a bark noise`
+
+In a main, create 2 different animals e.g. `dog` and `bird`. For both animals, call their `call` and `facts` methods.
+
 ## \[CIRC] Circles
 Create a `Circle` class. The class will have the property `radius` and must implement the following methods:
 * `getArea` - which returns the area of the circle.
 * `getCircumference` - which returns the circumference of (distance around) the circle
+
+In a main, create an instance of your Circle with a radius of 5. 
+Print the result of `getArea` and `getCircumference` for your circle. e.g.
+```
+A circle with radius 5 has an area of 78.53981633974483 and a circumference of 31.41592653589793
+```
+
+## \[HOTL] Hotels
+Create a `Hotel` class. The class needs the following properties:
+* A `name`
+* A `pricePerNight`
+
+The class should have the following methods:
+* `hotelSummary` - which prints a summary message about the hotel using the `name` and `price`. e.g. "The hotel Corinthia costs £200 per night".
+* `calculatePrice` - which takes an **argument** `numberOfNights` and calculates the total cost of the hotel over the number of nights.
+
+Create an instance of Hotel for a hotel of your choice. Call its `hotelSummary` and print out its `calculatePrice` for 3 nights.
 
 ## \[PROD] Products
 Complete the `Product` class. The class will have the properties:
