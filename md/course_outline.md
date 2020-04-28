@@ -17,7 +17,7 @@ We will be learning the base tools every programming language has using **psuedo
 
 **This lesson will be delivered in lecture format, covering "Describing how to solve problems"**
 
-**Actions:**
+**Actions:** 
 * Follow the [Developer Setup Guide](dev_setup.md)
 
 **Slides:** 
