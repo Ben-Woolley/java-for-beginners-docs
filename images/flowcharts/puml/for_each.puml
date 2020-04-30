@@ -1,0 +1,16 @@
+@startuml for_each
+
+start
+
+:list = ["Rome", "Tokyo", "New York"];
+
+while (any items left?) is (true)
+    :currentItem = next item in list;
+    :create destination link\nfor currentItem;
+endwhile (false)
+
+->false;
+
+stop
+
+@enduml

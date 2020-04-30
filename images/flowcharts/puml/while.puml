@@ -1,0 +1,15 @@
+@startuml while
+
+start
+
+:open file to copy;
+:create new file to copy to;
+while (file has lines?) is (true)
+    :read the next line from file;
+    :copy line into new file;
+endwhile (false)
+:close file;
+
+stop
+
+@enduml

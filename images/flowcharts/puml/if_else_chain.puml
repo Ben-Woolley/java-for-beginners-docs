@@ -1,0 +1,15 @@
+@startuml if_else_chain
+
+start
+
+if (condition 1?) then (true)
+    :do X;
+elseif (condition 2?) then (true)
+    :do Y;
+else (false)
+    :do Z;
+endif
+
+stop
+
+@enduml

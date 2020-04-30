@@ -1,0 +1,14 @@
+@startuml for_loop
+
+start
+
+:counter = 2;
+repeat
+    :print counter;
+    :increment counter by 2;
+repeat while (counter <= 20?) is (true)
+->false;
+
+stop
+
+@enduml

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="315px" preserveAspectRatio="none" style="width:291px;height:315px;" version="1.1" viewBox="0 0 291 315" width="291px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ef97gn87879e" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="150" cy="20" fill="#000000" filter="url(#f1ef97gn87879e)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FEFECE" filter="url(#f1ef97gn87879e)" height="33.9688" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="240" x="30" y="50"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="220" x="40" y="71.1387">list = ["Rome", "Tokyo", "New York"]</text><rect fill="#FEFECE" filter="url(#f1ef97gn87879e)" height="33.9688" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="206" x="47" y="164.7734"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="186" x="57" y="185.9121">currentItem = next item in list</text><rect fill="#FEFECE" filter="url(#f1ef97gn87879e)" height="47.9375" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="161" x="69.5" y="233.7422"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="141" x="79.5" y="254.8809">create destination link</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="94" x="79.5" y="268.8496">for currentItem</text><polygon fill="#FEFECE" filter="url(#f1ef97gn87879e)" points="108,103.9688,192,103.9688,204,115.9688,192,127.9688,108,127.9688,96,115.9688,108,103.9688" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="23" x="154" y="138.1792">true</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="108" y="119.7769">any items left?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="28" x="68" y="113.3745">false</text><ellipse cx="24" cy="162.9688" fill="#FFFFFF" filter="url(#f1ef97gn87879e)" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="24" cy="162.9688" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="150" y1="30" y2="50"/><polygon fill="#A80036" points="146,40,150,50,154,40,150,44" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="150" y1="198.7422" y2="233.7422"/><polygon fill="#A80036" points="146,223.7422,150,233.7422,154,223.7422,150,227.7422" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="150" y1="127.9688" y2="164.7734"/><polygon fill="#A80036" points="146,154.7734,150,164.7734,154,154.7734,150,158.7734" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="150" y1="281.6797" y2="291.6797"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="265" y1="291.6797" y2="291.6797"/><polygon fill="#A80036" points="261,214.8242,265,204.8242,269,214.8242,265,210.8242" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="265" x2="265" y1="115.9688" y2="291.6797"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="265" x2="204" y1="115.9688" y2="115.9688"/><polygon fill="#A80036" points="214,111.9688,204,115.9688,214,119.9688,210,115.9688" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="96" x2="24" y1="115.9688" y2="115.9688"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="24" x2="24" y1="115.9688" y2="151.9688"/><polygon fill="#A80036" points="20,141.9688,24,151.9688,28,141.9688,24,145.9688" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="150" x2="150" y1="83.9688" y2="103.9688"/><polygon fill="#A80036" points="146,93.9688,150,103.9688,154,93.9688,150,97.9688" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml for_each
+
+start
+
+:list = ["Rome", "Tokyo", "New York"];
+
+while (any items left?) is (true)
+    :currentItem = next item in list;
+    :create destination link\nfor currentItem;
+endwhile (false)
+
+->false;
+
+stop
+
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 17:19:51 BST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 14+36
+Operating System: Linux
+OS Version: 5.4.0-28-generic
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>
